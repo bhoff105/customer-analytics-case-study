@@ -81,18 +81,25 @@ def segment_scatter(segmented: pd.DataFrame) -> go.Figure:
         color_discrete_map=SEGMENT_COLORS,
         title="Champions Cluster Tight and Recent. At Risk Drifts Right",
         labels={
-            "days_since_last_order": "Days Since Last Order (Recency)",
-            "total_orders": "Total Orders (Frequency)",
-            "total_revenue": "Total Revenue",
+            "days_since_last_order": "Days Since Last Order",
+            "total_orders": "Total Orders",
+            "total_revenue": "Lifetime Revenue",
         },
-        size_max=26,
+        size_max=28,
         opacity=0.78,
     )
     fig.update_traces(
         marker=dict(line=dict(color=KIN_BG, width=1)),
     )
     fig.update_layout(
-        legend=dict(title=dict(text=""), orientation="h", y=1.05, x=0.01),
+        legend=dict(
+            title=dict(text=""),
+            orientation="h",
+            x=0, xanchor="left",
+            y=1.14, yanchor="bottom",
+        ),
     )
-    fig = _apply_base_layout(fig, height=440)
+    fig = _apply_base_layout(fig, height=480)
+    fig.update_layout(margin=dict(t=90, b=60, l=68, r=32))
+    fig.update_xaxes(ticksuffix="d")
     return fig

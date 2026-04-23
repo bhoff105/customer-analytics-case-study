@@ -49,52 +49,65 @@ def feature_importance_chart(model, feature_names: list) -> go.Figure:
     importances = model.feature_importances_
     idx = np.argsort(importances)
     labels = [feature_names[i].replace("_", " ").title() for i in idx]
+    values = importances[idx]
+    max_val = float(values.max()) if len(values) else 1.0
+
+    # Highlight the top feature in teal; others in neutral grey-blue
+    bar_fill = [
+        "rgba(45, 212, 191, 0.35)" if v == max_val else "rgba(126, 149, 176, 0.22)"
+        for v in values
+    ]
+    bar_line = [
+        KIN_ACCENT if v == max_val else "#7E95B0"
+        for v in values
+    ]
 
     fig = go.Figure(go.Bar(
-        x=importances[idx],
+        x=values,
         y=labels,
         orientation="h",
-        marker=dict(
-            color=KIN_ACCENT_SOFT,
-            line=dict(color=KIN_ACCENT, width=1),
-        ),
-        hovertemplate="<b>%{y}</b><br>Importance: %{x:.3f}<extra></extra>",
+        marker=dict(color=bar_fill, line=dict(color=bar_line, width=1)),
+        hovertemplate="<b>%{y}</b><br>Importance: %{x:.2f}<extra></extra>",
     ))
     fig.update_layout(
-        title="Recency and Engagement Drive the Model. Discount Rate Ranks Close Behind",
+        title="Email Engagement Leads, Recency and Frequency Close Behind",
         xaxis_title="Relative Importance",
         yaxis_title="",
         showlegend=False,
+        bargap=0.3,
     )
-    fig = _apply_base_layout(fig, height=380)
+    fig = _apply_base_layout(fig, height=400)
     # Left margin for long feature labels
-    fig.update_layout(margin=dict(t=48, b=48, l=160, r=32))
+    fig.update_layout(margin=dict(t=56, b=56, l=170, r=32))
+    fig.update_xaxes(tickformat=".0%", range=[0, max(max_val * 1.1, 0.01)])
+    fig.update_yaxes(tickfont=dict(family="DM Sans, sans-serif", size=12, color="#E8EDF5"))
     return fig
 
 
 def score_distribution_chart(scored: pd.DataFrame) -> go.Figure:
     fig = px.histogram(
         scored, x="churn_score", nbins=20,
-        title="High-Risk Tail Is Small but Concentrated. That's Where the List Comes From",
+        title="Most Customers Sit Low on Risk. The Right Tail Is Where Money Is Made",
         color_discrete_sequence=[KIN_BLUE],
-        labels={"churn_score": "Churn Risk Score (0–100)"},
+        labels={"churn_score": "Churn Risk Score"},
     )
     fig.update_traces(
         marker=dict(color=KIN_BLUE_SOFT, line=dict(color=KIN_BLUE, width=1)),
         hovertemplate="<b>Score %{x}</b><br>%{y} customers<extra></extra>",
     )
     fig.add_vline(
-        x=70, line_dash="dot", line_color=KIN_RED, line_width=1.5,
-        annotation_text="High Risk Threshold",
+        x=70, line_dash="dot", line_color=KIN_RED, line_width=1.25,
+        annotation_text="High risk",
         annotation_position="top right",
-        annotation_font=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_RED),
+        annotation_font=dict(family="DM Sans, sans-serif", size=11, color=KIN_RED),
     )
     fig.update_layout(
         yaxis_title="Customers",
-        xaxis_title="Churn Risk Score (0–100)",
+        xaxis_title="Churn Risk Score",
         showlegend=False,
+        bargap=0.08,
     )
-    fig = _apply_base_layout(fig, height=360)
+    fig = _apply_base_layout(fig, height=400)
     return fig
 
 

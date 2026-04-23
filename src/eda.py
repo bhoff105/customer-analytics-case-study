@@ -19,35 +19,41 @@ KIN_AMBER      = "#F59E0B"
 KIN_RED        = "#EF4444"
 KIN_VIOLET     = "#A78BFA"
 
-KIN_FONT = dict(family="DM Sans, system-ui, sans-serif", color=KIN_TEXT_DIM, size=12)
-KIN_MONO = dict(family="IBM Plex Mono, monospace", color=KIN_MUTED, size=11)
+KIN_FONT = dict(family="DM Sans, system-ui, sans-serif", color=KIN_TEXT_DIM, size=13)
+# Softer gridline for a cleaner business-chart look
+KIN_GRID_SOFT = "rgba(126, 149, 176, 0.08)"
 
 # Chart config applied globally — hides modebar
 CHART_CONFIG = {"displayModeBar": False, "displaylogo": False, "staticPlot": False}
 
 
 def _apply_base_layout(fig: go.Figure, height: int = 380) -> go.Figure:
-    """Shared base styling for every chart in the case study."""
+    """
+    Shared base styling for every chart in the case study.
+    Business-dashboard aesthetic: sans-serif tick labels, soft gridlines,
+    generous margins, no modebar, no techy axis rules.
+    """
     fig.update_layout(
         height=height,
-        margin=dict(t=48, b=48, l=56, r=32),
+        margin=dict(t=56, b=56, l=68, r=32),
         plot_bgcolor=KIN_BG,
         paper_bgcolor=KIN_PAPER,
         font=KIN_FONT,
         title=dict(
-            font=dict(family="DM Sans, sans-serif", size=15, color=KIN_TEXT),
-            x=0.01, xanchor="left", y=0.96,
+            font=dict(family="DM Sans, sans-serif", size=15, color=KIN_TEXT, weight=500),
+            x=0.0, xanchor="left", y=0.97,
+            pad=dict(l=0, r=0, t=0, b=12),
         ),
         legend=dict(
             bgcolor="rgba(0,0,0,0)",
             bordercolor=KIN_BORDER,
             borderwidth=0,
-            font=dict(family="DM Sans, sans-serif", size=11, color=KIN_TEXT_DIM),
+            font=dict(family="DM Sans, sans-serif", size=12, color=KIN_TEXT_DIM),
         ),
         hoverlabel=dict(
             bgcolor="#0B0F1A",
             bordercolor=KIN_ACCENT,
-            font=dict(family="IBM Plex Mono, monospace", size=11, color=KIN_TEXT),
+            font=dict(family="DM Sans, sans-serif", size=12, color=KIN_TEXT),
         ),
         modebar=dict(remove=[
             "zoom", "pan", "select", "lasso2d", "zoomIn", "zoomOut",
@@ -57,20 +63,22 @@ def _apply_base_layout(fig: go.Figure, height: int = 380) -> go.Figure:
     fig.update_xaxes(
         showgrid=False,
         zeroline=False,
-        showline=True,
-        linecolor=KIN_BORDER,
-        linewidth=1,
-        tickfont=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_MUTED),
-        title_font=dict(family="DM Sans, sans-serif", size=11, color=KIN_MUTED),
+        showline=False,
+        ticks="",
+        tickfont=dict(family="DM Sans, sans-serif", size=12, color=KIN_TEXT_DIM),
+        title_font=dict(family="DM Sans, sans-serif", size=12, color=KIN_MUTED),
+        title_standoff=14,
     )
     fig.update_yaxes(
         showgrid=True,
-        gridcolor=KIN_GRID,
+        gridcolor=KIN_GRID_SOFT,
         gridwidth=1,
         zeroline=False,
         showline=False,
-        tickfont=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_MUTED),
-        title_font=dict(family="DM Sans, sans-serif", size=11, color=KIN_MUTED),
+        ticks="",
+        tickfont=dict(family="DM Sans, sans-serif", size=12, color=KIN_TEXT_DIM),
+        title_font=dict(family="DM Sans, sans-serif", size=12, color=KIN_MUTED),
+        title_standoff=14,
     )
     return fig
 
@@ -101,10 +109,11 @@ def revenue_concentration_chart(customers: pd.DataFrame) -> go.Figure:
         title="Top 20% of Customers Drive ~53% of Revenue",
         xaxis_title="Cumulative % of Customers",
         yaxis_title="Cumulative % of Revenue",
+        showlegend=False,
     )
-    fig = _apply_base_layout(fig, height=380)
-    fig.update_xaxes(range=[0, 100])
-    fig.update_yaxes(range=[0, 101])
+    fig = _apply_base_layout(fig, height=400)
+    fig.update_xaxes(range=[0, 100], ticksuffix="%")
+    fig.update_yaxes(range=[0, 101], ticksuffix="%")
     return fig
 
 
@@ -140,14 +149,22 @@ def acquisition_retention_chart(customers: pd.DataFrame) -> go.Figure:
         yaxis=dict(title="Customers Acquired"),
         yaxis2=dict(
             title="Retention Rate (%)", overlaying="y", side="right",
-            range=[0, 100], showgrid=False, zeroline=False, showline=False,
-            tickfont=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_AMBER),
-            title_font=dict(family="DM Sans, sans-serif", size=11, color=KIN_AMBER),
+            range=[0, 100], showgrid=False, zeroline=False, showline=False, ticks="",
+            tickfont=dict(family="DM Sans, sans-serif", size=12, color=KIN_AMBER),
+            title_font=dict(family="DM Sans, sans-serif", size=12, color=KIN_AMBER),
+            title_standoff=14,
         ),
-        legend=dict(x=0.01, y=0.99, orientation="h"),
+        # Legend pinned above the plot area so bars and line can never overlap it
+        legend=dict(
+            orientation="h",
+            x=0, xanchor="left",
+            y=1.14, yanchor="bottom",
+        ),
         barmode="group",
     )
-    fig = _apply_base_layout(fig, height=400)
+    fig = _apply_base_layout(fig, height=440)
+    fig.update_layout(margin=dict(t=90, b=56, l=68, r=68))
+    fig.update_yaxes(tickformat=",d")
     return fig
 
 
@@ -166,11 +183,13 @@ def monthly_revenue_chart(orders: pd.DataFrame) -> go.Figure:
     fig.update_layout(
         title="Off-Peak Revenue Is Flat: No Compounding from the Existing Base",
         xaxis_title="",
-        yaxis_title="Revenue ($)",
+        yaxis_title="Monthly Revenue",
         showlegend=False,
+        bargap=0.25,
     )
-    fig = _apply_base_layout(fig, height=360)
-    fig.update_xaxes(showgrid=False)
+    fig = _apply_base_layout(fig, height=380)
+    fig.update_xaxes(showgrid=False, dtick="M3", tickformat="%b %Y")
+    fig.update_yaxes(tickprefix="$", tickformat=",.0f")
     return fig
 
 
@@ -217,14 +236,23 @@ def category_performance_chart(customers: pd.DataFrame, orders: pd.DataFrame) ->
     ))
     fig.update_layout(
         title="Gifts Buyers Repeat at ~17%. Every Other Category Clears 70%",
-        yaxis=dict(title="Repeat Purchase Rate (%)"),
+        yaxis=dict(title="Repeat Purchase Rate (%)", range=[0, 100]),
         yaxis2=dict(
             title="Avg Order Value ($)", overlaying="y", side="right",
-            showgrid=False, zeroline=False, showline=False,
-            tickfont=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_AMBER),
-            title_font=dict(family="DM Sans, sans-serif", size=11, color=KIN_AMBER),
+            showgrid=False, zeroline=False, showline=False, ticks="",
+            tickfont=dict(family="DM Sans, sans-serif", size=12, color=KIN_AMBER),
+            title_font=dict(family="DM Sans, sans-serif", size=12, color=KIN_AMBER),
+            title_standoff=14,
         ),
-        legend=dict(x=0.01, y=0.99, orientation="h"),
+        # Legend pinned above the plot area — prevents overlap with tall bars
+        legend=dict(
+            orientation="h",
+            x=0, xanchor="left",
+            y=1.14, yanchor="bottom",
+        ),
+        bargap=0.35,
     )
-    fig = _apply_base_layout(fig, height=400)
+    fig = _apply_base_layout(fig, height=440)
+    fig.update_layout(margin=dict(t=90, b=56, l=68, r=68))
+    fig.update_yaxes(ticksuffix="%")
     return fig
