@@ -1113,23 +1113,24 @@ h1, h2, h3, h4, h5, h6,
   background: var(--color-accent);
 }
 
-.exec-summary__headline {
-  font-family: var(--font-display);
-  font-size: var(--fs-2xl);
-  font-weight: 400;
-  color: var(--color-text);
+/* Override global .stMarkdown h2/p !important rules so the exec summary renders correctly */
+.exec-summary h2.exec-summary__headline {
+  font-family: var(--font-display) !important;
+  font-size: var(--fs-2xl) !important;
+  font-weight: 400 !important;
+  color: var(--color-text) !important;
   letter-spacing: -0.01em;
   line-height: 1.2;
-  margin: 0 0 var(--space-4) 0;
+  margin: 0 0 var(--space-4) 0 !important;
   max-width: 760px;
 }
 
-.exec-summary__lede {
+.exec-summary p.exec-summary__lede {
   font-family: var(--font-sans);
-  font-size: var(--fs-md);
-  color: var(--color-text-dim);
-  line-height: 1.7;
-  margin: 0 0 var(--space-6) 0;
+  font-size: var(--fs-md) !important;
+  color: var(--color-text-dim) !important;
+  line-height: 1.7 !important;
+  margin: 0 0 var(--space-6) 0 !important;
   max-width: 760px;
 }
 
@@ -1264,12 +1265,12 @@ h1, h2, h3, h4, h5, h6,
   margin: 0 0 var(--space-3) 0;
 }
 
-.exec-summary__use-body {
+.exec-summary p.exec-summary__use-body {
   font-family: var(--font-sans);
-  font-size: var(--fs-md);
-  color: var(--color-text-dim);
-  line-height: 1.75;
-  margin: 0;
+  font-size: var(--fs-md) !important;
+  color: var(--color-text-dim) !important;
+  line-height: 1.75 !important;
+  margin: 0 !important;
   max-width: 820px;
 }
 

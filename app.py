@@ -108,15 +108,21 @@ st.markdown(
       <div class="hero-block__eyebrow">Kinetric · Portfolio Case Study</div>
       <h1 class="hero-block__title">Customer Analytics Case Study</h1>
       <p class="hero-block__frame">
-        A complete Kinetric engagement for a $1.5M DTC brand, from two raw CSV exports to a founder-ready
-        recommendation memo. Read over the analyst's shoulder at every stage: what the data actually said,
-        where AI got it close but not quite, and the domain judgment that turned the analysis into a decision.
+        This is a complete Kinetric engagement, end to end, for a DTC brand shaped like yours. Every stage shows
+        what we actually delivered: what your data says, where AI gets it close but not quite, and the domain
+        judgment that turns the analysis into a decision you can execute on Monday.
       </p>
       <div class="hero-block__scenario">
-        <strong>Client Scenario</strong>
-        A DTC Shopify brand doing approximately $1.5M in annual revenue, 18 months in market.
-        Strong paid social acquisition, inconsistent retention, monthly targets slipping despite healthy top-of-funnel.
-        Two CSV exports, no documentation, no data dictionary. The founder's brief: "tell us what we're missing."
+        <strong>Is this shaped like you?</strong>
+        If you're running a DTC brand doing roughly $1M to $10M in annual revenue, with strong paid social acquisition
+        and inconsistent retention, and your monthly targets keep slipping despite a healthy top of funnel, this
+        engagement is shaped like you. The example below is a $1.5M Shopify brand, 18 months in market, who
+        handed us two CSVs and one question: "tell us what we're missing."
+      </div>
+      <div class="hero-block__scenario">
+        <strong>What this is not</strong>
+        Not a dashboarding project. Not a data engineering build. Not a fractional data team on retainer.
+        One focused engagement, one decision-ready memo, on your desk in a matter of weeks.
       </div>
     </div>
     ''',
@@ -128,18 +134,18 @@ st.markdown(
     '''
     <div class="exec-summary">
       <div class="exec-summary__eyebrow">Executive summary</div>
-      <h2 class="exec-summary__headline">What a $1.5M DTC brand walks away with after a Kinetric engagement.</h2>
+      <h2 class="exec-summary__headline">Here is what you walk away with after a Kinetric engagement.</h2>
       <p class="exec-summary__lede">
-        The client handed over two CSV exports, no documentation, and a founder asking what they were missing.
-        They leave with a named segmentation of their customer base, a churn score for every account, a ranked
-        intervention list their retention lead works from on Monday, and a founder memo that reallocates retention
-        spend toward the group that moves the top line. The dollar shape of the opportunity is retention,
-        not acquisition. This page is the entire engagement, end to end.
+        You hand us two CSV exports and the question you have been sitting on: where is the revenue actually
+        leaking. You walk away with a named segmentation of your customer base, a churn score for every account,
+        a ranked list of the 20 customers your retention lead calls first, and a founder memo that reallocates
+        retention spend toward the group that actually moves your top line. The dollar shape of your opportunity
+        is retention, not acquisition, and this page is the full engagement you receive, end to end.
       </p>
 
       <div class="exec-summary__grid">
         <div class="exec-summary__col">
-          <div class="exec-summary__col-label">What the client hands over</div>
+          <div class="exec-summary__col-label">What you hand over</div>
           <div class="exec-summary__inputs">
             <div class="exec-input">
               <div class="exec-input__icon">CSV</div>
@@ -159,27 +165,27 @@ st.markdown(
         </div>
 
         <div class="exec-summary__col">
-          <div class="exec-summary__col-label">What the client receives</div>
+          <div class="exec-summary__col-label">What you receive</div>
           <div class="exec-summary__outputs">
             <div class="exec-output">
               <div class="exec-output__num">01</div>
-              <div class="exec-output__name">Segmented customer base</div>
-              <div class="exec-output__detail">Five named segments (Champions, Loyalists, Promising, Price Hunters, At Risk) with a plain-English playbook per segment.</div>
+              <div class="exec-output__name">A segmented customer base</div>
+              <div class="exec-output__detail">Your customers grouped into five named segments (Champions, Loyalists, Promising, Price Hunters, At Risk) with a plain-English playbook for each.</div>
             </div>
             <div class="exec-output">
               <div class="exec-output__num">02</div>
-              <div class="exec-output__name">Churn-risk scores</div>
-              <div class="exec-output__detail">A 0 to 100 score for every customer, refreshed from one model, ranked by intervention priority.</div>
+              <div class="exec-output__name">A churn-risk score on every customer</div>
+              <div class="exec-output__detail">A 0 to 100 score on every account in your file, ranked by intervention priority so your retention spend goes where it earns.</div>
             </div>
             <div class="exec-output">
               <div class="exec-output__num">03</div>
-              <div class="exec-output__name">Intervention list</div>
-              <div class="exec-output__detail">The 20 customers worth calling first, ranked by LTV times churn probability, with a recommended action per row.</div>
+              <div class="exec-output__name">A prioritized intervention list</div>
+              <div class="exec-output__detail">The 20 customers your retention lead works first, ranked by LTV times churn probability, with a specific recommended action on every row.</div>
             </div>
             <div class="exec-output">
               <div class="exec-output__num">04</div>
-              <div class="exec-output__name">Founder memo</div>
-              <div class="exec-output__detail">Three findings, three numbers, three actions with specific timelines. One page, forward-ready.</div>
+              <div class="exec-output__name">A one-page founder memo</div>
+              <div class="exec-output__detail">Three findings, three numbers, three actions with specific timelines. Written for you to forward to your retention lead without editing.</div>
             </div>
           </div>
         </div>
@@ -188,16 +194,25 @@ st.markdown(
       <div class="exec-summary__use">
         <div class="exec-summary__use-label">What you do with them</div>
         <p class="exec-summary__use-body">
-          Monday morning, your retention lead pulls the 20-name intervention list and assigns it a single owner.
-          That owner launches a personalized three-touch win-back sequence against the At Risk cohort by Friday,
-          targeting 15 to 20% reactivation inside 30 days. Inside the same 30-day window, the founder reallocates
-          30% of paid social win-back budget into email and organic cohort re-engagement, then measures 60-day
-          repeat rate against baseline before making it permanent. Within 60 days, the team ships a Gifts-entry
-          post-purchase sequence cross-selling into Home &amp; Kitchen and Beauty &amp; Wellness, with the goal of
-          lifting 30-day second-order rate on Gifts-first buyers from 17% toward 40%. The segmentation and churn
-          scores get refreshed monthly and drive every retention decision from that point forward, no new tools,
-          no new hires.
+          On Monday morning, your retention lead pulls the 20-name intervention list and owns it end to end. By Friday,
+          they have launched a personalized three-touch win-back sequence against your At Risk cohort, targeting 15 to
+          20% reactivation inside 30 days. Inside that same 30-day window, you reallocate 30% of your paid social win-back
+          budget into email and organic cohort re-engagement, then measure 60-day repeat rate against baseline before
+          making the change permanent. Within 60 days, you ship a Gifts-entry post-purchase sequence that cross-sells
+          into Home &amp; Kitchen and Beauty &amp; Wellness, lifting 30-day second-order rate on Gifts-first buyers from
+          17% toward 40%. From that point forward, your segmentation and churn scores refresh monthly and drive every
+          retention decision you make. No new tools. No new hires.
         </p>
+
+        <div class="exec-summary__use">
+          <div class="exec-summary__use-label">Cost of waiting a quarter</div>
+          <p class="exec-summary__use-body">
+            Your At Risk 20 keep slipping further from recoverable every week no one works the list. Your paid social
+            cohort keeps spending as it always has, acquiring the same low-retention customers on top of a churning base.
+            Your Gifts-first buyers keep arriving and exiting without a bridge into the categories that would have kept
+            them. The math of the opportunity gets worse, not better, while the outputs above sit unused.
+          </p>
+        </div>
       </div>
     </div>
     ''',
@@ -208,13 +223,13 @@ st.markdown(
 stage_marker("Stage 0 of 5", "The Brief")
 st.markdown("## The Brief")
 st.markdown("""
-The client handed over two CSVs and a vague worry. Before touching the data, we pinned down what they were actually asking and what shape an answer had to take to be useful. Everything downstream, the segmentation in Stage 3, the model in Stage 4, the memo in Stage 5, traces back to this framing.
+You hand us two CSVs and a vague worry. Before we touch the data, we pin down what you are actually asking and what shape an answer has to take to be useful to you. Everything downstream, the segmentation in Stage 3, the model in Stage 4, the memo in Stage 5, traces back to what we agreed to here.
 
-**The client:** A DTC Shopify brand doing approximately $1.5M in annual revenue. 18 months in business, strong paid social acquisition, inconsistent retention.
+**Your business:** A DTC Shopify brand doing approximately $1.5M in annual revenue. 18 months in market. Strong paid social acquisition. Inconsistent retention.
 
-**What they said:** *"We know something's off with our customer mix. Our numbers look fine on the surface but we keep missing monthly targets. We've exported everything we have. Can you tell us what we're missing?"*
+**What you told us:** *"We know something's off with our customer mix. Our numbers look fine on the surface but we keep missing monthly targets. We've exported everything we have. Can you tell us what we're missing?"*
 
-**What they handed over:** Two CSV exports. No documentation, no data dictionary, no context.
+**What you handed over:** Two CSV exports. No documentation, no data dictionary, no context.
 """)
 
 with st.expander("View raw data: orders.csv (first 10 rows)"):
@@ -229,11 +244,11 @@ section_divider()
 stage_marker("Stage 1 of 5", "Data Assessment")
 st.markdown("## Data Assessment")
 st.markdown(
-    "The first pass is schema diligence: what each field actually represents, which ones are trustworthy at face value, "
-    "which are point-in-time snapshots masquerading as lifetime signals, and where the gaps will force a caveat later. "
-    "Below is the AI's read of the two tables, then the analyst's correction. The correction matters because one of the "
-    "trustworthy-looking fields, `email_opens_30d`, will otherwise quietly bias the churn model in Stage 4 "
-    "against every customer the brand acquired in the last two months."
+    "Before we build anything, we read your schema like a domain expert. Which of your fields are trustworthy at face "
+    "value, which are point-in-time snapshots masquerading as lifetime signals, and where are the gaps that will force "
+    "a caveat later in your engagement. Below is the AI's read of your two tables, then the correction we made. The "
+    "correction matters because one of the trustworthy-looking fields, `email_opens_30d`, will otherwise quietly bias "
+    "your churn model in Stage 4 against every customer you acquired in the last two months."
 )
 
 col1, col2, col3, col4 = st.columns(4)
@@ -278,15 +293,15 @@ ai_callout(
     "feature set and treat email engagement as a core signal."
 )
 analyst_note(
-        "Claude read the schema correctly as a standard Shopify order-and-customer export, and it flagged the "
-        "right business context (DTC, transactional, suited to retention work). That framing is useful and I'd keep it. "
-        "What it missed is a trap in the engagement columns: <code>email_opens_30d</code> and <code>email_clicks_30d</code> "
-        "are a 30-day snapshot, not a lifetime signal. A customer who signed up last week has had almost nothing to open, "
-        "so feeding those fields into a churn model unfiltered will punish new customers for not having had time to engage. "
-        "The fix is to restrict model training to customers with 60+ days of tenure, then score the full population. "
-        "That single correction changes who ends up on the intervention list in Stage 4, which is the only output the "
-        "client is going to act on. Worth naming now so nothing downstream has to be redone."
-    )
+    "Claude read your schema correctly as a standard Shopify order-and-customer export, and it framed your business "
+    "context accurately: DTC, transactional, suited to retention work. We kept that framing. "
+    "What it missed is a trap in your engagement columns. <code>email_opens_30d</code> and <code>email_clicks_30d</code> "
+    "are a 30-day snapshot, not a lifetime signal. A customer you acquired last week has had almost nothing to open, "
+    "so feeding those fields into your churn model unfiltered will punish your newest customers for not having had "
+    "time to engage. The fix is to restrict model training to customers with 60+ days of tenure, then score your full "
+    "population. That single correction changes who ends up on your intervention list in Stage 4, which is the only "
+    "output you are actually going to act on. Worth naming now so nothing downstream has to be redone."
+)
 
 section_divider()
 
@@ -294,11 +309,11 @@ section_divider()
 stage_marker("Stage 2 of 5", "Exploratory Analysis")
 st.markdown("## Exploratory Analysis")
 st.markdown(
-    "Four questions drove this stage: where the revenue actually comes from, which acquisition channels produce customers "
-    "worth keeping, what the revenue trend looks like once seasonality is stripped out, and which product entry points "
-    "predict a second purchase. The four charts below answer each in turn. Three findings are strong enough to anchor "
-    "the final memo, and by the end of this stage the thread connecting them (one underlying customer segment driving "
-    "all three) is visible without labeling it yet."
+    "Four questions drive this stage, all about your business: where your revenue actually comes from, which of your "
+    "acquisition channels produce customers worth keeping, what your revenue trend looks like once seasonality is "
+    "stripped out, and which product entry points predict a second purchase. The four charts below answer each in "
+    "turn. Three findings are strong enough to anchor your final memo, and by the end of this stage the thread "
+    "connecting them (one underlying customer segment driving all three) is visible without us labeling it yet."
 )
 
 st.markdown("### Top 20% of Customers Drive 53% of Revenue")
@@ -307,66 +322,66 @@ st.plotly_chart(revenue_concentration_chart(customers), use_container_width=True
 pct_top20 = customers.nlargest(int(len(customers) * 0.2), "total_revenue")["total_revenue"].sum()
 pct_top20_share = pct_top20 / customers["total_revenue"].sum() * 100
 analyst_note(
-    f"The top 20% of customers account for <strong>{pct_top20_share:.0f}%</strong> of total revenue. "
-    "A 50/20 split isn't unusual for DTC, so the shape of the curve is consistent with a healthy repeat-buyer base. "
-    "What the chart doesn't say on its own is what the client is doing with that information today. "
-    "Right now the brand runs a single re-engagement campaign across its entire file: a $900 LTV customer and a "
-    "$45 one-and-done buyer receive the same email, the same discount, the same cadence. "
-    "The domain logic is straightforward: retention spend scales with expected future revenue, not with list size. "
-    "For the engagement, this becomes the first input to the segmentation work in Stage 3 and the intervention "
-    "priority ranking in Stage 4. The memo will recommend a reallocation, not a new program."
+    f"Your top 20% of customers account for <strong>{pct_top20_share:.0f}%</strong> of your total revenue. "
+    "A 50/20 split isn't unusual for DTC, so the shape of your curve is consistent with a healthy repeat-buyer base. "
+    "That's the part worth keeping. "
+    "What the chart doesn't say on its own is what you are doing with that information today. "
+    "Today you run a single re-engagement campaign across your entire file: a $900 LTV customer and a $45 "
+    "one-and-done buyer receive the same email, the same discount, the same cadence. "
+    "The logic here is straightforward: your retention spend should scale with expected future revenue, not with list size. "
+    "For your engagement, this becomes the first input to the segmentation in Stage 3 and the intervention "
+    "priority ranking in Stage 4. Your memo recommends a reallocation of what you already spend, not a new program."
 )
 
 st.markdown("### Paid Social Buys 52% of Customers and Keeps 22% of Them")
 st.plotly_chart(acquisition_retention_chart(customers), use_container_width=True, config=PLOTLY_CFG)
 
 ai_callout(
-    "Three patterns stand out in the EDA. First, <strong>revenue concentration</strong>: the top 20% of customers "
+    "Three patterns stand out in your EDA. First, <strong>revenue concentration</strong>: your top 20% of customers "
     "account for roughly 53% of total revenue, a healthy Pareto shape for DTC. Second, <strong>channel inversion</strong>: "
-    "<code>paid_social</code> is the largest acquisition channel at about 52% of customer volume but retains only around "
+    "<code>paid_social</code> is your largest acquisition channel at about 52% of customer volume but retains only around "
     "22% at 12 months, while <code>email</code> and <code>organic</code> acquire fewer customers and retain them near 70% "
     "and 59% respectively. Third, <strong>category gap</strong>: customers whose first purchase is in the <code>Gifts</code> "
     "category repeat at roughly 17% versus 71% for every other category, a materially lower rate. Each pattern is worth "
-    "investigating further as a potential driver of the retention softness the client flagged in the brief."
+    "investigating further as a potential driver of the retention softness you flagged in your brief."
 )
 analyst_note(
-        "Claude surfaced the volume/retention inversion correctly: paid_social is the largest channel by customer "
-        "count and the worst by retention (roughly 22% retained vs. 70% for email and 59% for organic). "
-        "That framing is right and worth keeping in the memo verbatim. "
-        "Where Claude stopped short: it treated this as a channel efficiency story. It isn't, or rather it isn't only that. "
-        "The paid social cohort skews heavily toward discount-driven first purchases and concentrates in the Gifts category, "
-        "which means the channel issue is the same population as the Price Hunter segment we'll isolate in Stage 3 "
-        "and the Gifts retention trough we'll see in the next chart. Three findings, one underlying customer. "
-        "For the engagement, the implication is that pulling paid social spend without fixing the downstream "
-        "experience trades one problem for another. The memo needs to recommend both moves together."
-    )
+    "Claude surfaced your volume/retention inversion correctly: paid social is your largest channel by customer count "
+    "and your worst by retention (roughly 22% retained vs. 70% for email and 59% for organic). That framing is right "
+    "and it lands in your memo verbatim. "
+    "Where Claude stopped short: it treated this as a channel efficiency story. It isn't, or rather it isn't only that. "
+    "Your paid social cohort skews heavily toward discount-driven first purchases and concentrates in the Gifts "
+    "category, which means your channel issue is the same population as the Price Hunter segment we'll isolate in "
+    "Stage 3 and the Gifts retention trough we'll see in the next chart. Three findings, one underlying customer. "
+    "For your engagement, the implication is that pulling paid social spend without fixing the downstream experience "
+    "trades one problem for another. Your memo recommends both moves together."
+)
 
 st.markdown("### Outside the Holiday Window, Revenue Is Flat")
 st.plotly_chart(monthly_revenue_chart(orders), use_container_width=True, config=PLOTLY_CFG)
 analyst_note(
-    "The Nov/Dec peak is the expected gifting-season lift and not a signal of underlying growth, so stripping "
-    "it out is the honest way to read the chart. With the peak removed, monthly revenue is flat to modestly "
-    "declining across the 18-month window. The chart is accurate as far as it goes. "
-    "What it doesn't show is the compounding effect a healthy retention engine should produce. "
-    "Eighteen months into a DTC brand, a working retention motion should be lifting the monthly floor as the "
-    "customer base accumulates, even in off-peak months. "
-    "We're seeing the opposite pattern, which means new acquisitions are replacing lapsed customers rather "
-    "than stacking on top of them. That's the definition of a retention problem showing up in the top line, "
-    "and it sets up the At Risk segment work in Stage 3 as the highest-return intervention in the engagement."
+    "Your Nov/Dec peak is the expected gifting-season lift, not a signal of underlying growth, so stripping it out is "
+    "the honest way to read this chart. With the peak removed, your monthly revenue is flat to modestly declining across "
+    "the 18-month window. That reading is accurate as far as it goes. "
+    "What the chart doesn't show is the compounding effect a healthy retention engine should produce. "
+    "Eighteen months into a DTC brand, a working retention motion should be lifting your monthly floor as your customer "
+    "base accumulates, even in off-peak months. "
+    "You are seeing the opposite pattern, which means your new acquisitions are replacing lapsed customers rather than "
+    "stacking on top of them. That's the definition of a retention problem showing up in your top line, and it sets up "
+    "the At Risk segment work in Stage 3 as the highest-return intervention in your engagement."
 )
 
 st.markdown("### Gifts Buyers Don't Come Back, Everyone Else Does")
 st.plotly_chart(category_performance_chart(customers, orders), use_container_width=True, config=PLOTLY_CFG)
 analyst_note(
-    "Customers whose first purchase is in the Gifts category show a repeat rate near 17%, versus roughly "
-    "71% across every other category. That's a structural gap, not a rounding difference, and it's the single "
-    "cleanest finding in the EDA. The chart on its own could be read as 'Gifts customers are low-value,' which "
-    "would be the wrong conclusion. AOV on the Gifts cohort is in line with the rest of the file, so these "
-    "customers are spending when they convert. The problem is that a gift purchase creates no natural reason to "
-    "return. Without a post-purchase flow that bridges into categories the customer actually uses themselves, "
-    "the relationship ends at the first transaction. "
-    "For the memo, this becomes Finding 3: the fix isn't a discount or a new product line, it's a category-specific "
-    "email sequence introducing the two highest-retention categories to every Gifts-first buyer within 14 days of their order."
+    "Your customers whose first purchase is in the Gifts category repeat at roughly 17%, versus near 71% across every "
+    "other category. That's a structural gap, not a rounding difference, and it's the single cleanest finding in your "
+    "EDA. The chart on its own could be read as 'Gifts customers are low-value,' which would be the wrong conclusion. "
+    "AOV on your Gifts cohort is in line with the rest of your file, so these customers are spending when they convert. "
+    "The problem is that a gift purchase creates no natural reason to return. Without a post-purchase flow that bridges "
+    "into a category the buyer actually uses themselves, the relationship ends at the first transaction. "
+    "For your memo, this becomes Finding 3: the fix isn't a discount or a new product line, it's a category-specific "
+    "email sequence introducing your two highest-retention categories to every Gifts-first buyer within 14 days of their order."
 )
 
 section_divider()
@@ -375,11 +390,11 @@ section_divider()
 stage_marker("Stage 3 of 5", "Customer Segmentation")
 st.markdown("## Customer Segmentation")
 st.markdown(
-    "The segmentation gives the client five named groups to talk to, each with a different retention action: who to "
-    "protect, who to grow, who to win back, who to stop subsidizing. The underlying method is RFM (recency, frequency, "
-    "monetary) scoring run through K-means to land on five clusters, then relabeled from cluster numbers into business "
-    "language the founder's retention lead can use without translation. Below are the five segment profiles as we delivered "
-    "them, followed by the scatter that shows how the segments separate in the data."
+    "The segmentation gives you five named groups to talk to, each with a different retention action: who to protect, "
+    "who to grow, who to win back, who to stop subsidizing. The underlying method is RFM (recency, frequency, monetary) "
+    "scoring run through K-means to land on five clusters, then relabeled from cluster numbers into business language "
+    "your retention lead can use without translation. Below are the five segment profiles as we delivered them to you, "
+    "followed by the scatter that shows how your segments separate in the data."
 )
 
 with st.spinner("Running segmentation..."):
@@ -391,27 +406,27 @@ st.markdown("### Segment Profiles")
 # Segment profile card data — one row per segment, written for a founder
 _SEGMENT_META = {
     "Champions": {
-        "description": "Your highest-value customers, active in the last 30 days, buying at or near full price. The engine of the business.",
-        "strategy": "Invite into a referral program. Exclude from discount promotions entirely. Surface new arrivals and early access as engagement levers.",
+        "description": "Your highest-value customers, active in the last 30 days, buying at or near full price. The engine of your business.",
+        "strategy": "Invite them into a referral program. Exclude them from discount promotions entirely. Surface new arrivals and early access as your engagement levers.",
         "color": "#2DD4BF",
     },
     "Loyalists": {
-        "description": "Consistent repeat buyers with strong order frequency. Not as recent as Champions but reliably active across the year.",
-        "strategy": "Maintain cadence with product-led content. Do not lead with discounts. Candidates for loyalty tiers once the brand has scale to support them.",
+        "description": "Your consistent repeat buyers. Strong order frequency, not as recent as Champions, but reliably active across the year.",
+        "strategy": "Maintain cadence with product-led content. Do not lead with discounts. These are the candidates for a loyalty tier once your brand has the scale to support one.",
         "color": "#22C55E",
     },
     "Promising": {
-        "description": "Newer customers who have purchased once or twice. High potential, not yet habit. Concentrated in single-category purchases including Gifts.",
-        "strategy": "Send a second-purchase sequence within 14 days of first order. Cross-sell into high-retention categories. The 90-day window is the conversion window; don't let it close.",
+        "description": "Your newer customers, one or two purchases in. High potential, not yet habit. Concentrated in single-category purchases including Gifts.",
+        "strategy": "Send them a second-purchase sequence within 14 days of first order. Cross-sell into your highest-retention categories. Your 90-day window is the conversion window. Don't let it close.",
         "color": "#A78BFA",
     },
     "Price Hunters": {
-        "description": "Repeat buyers whose purchases are heavily discount-driven. Churn rate runs roughly 3x Champions. Discount exposure reinforces the pattern.",
-        "strategy": "Do not offer further discounts. Send educational and brand-story content to shift the relationship. Measure 60-day repeat rate without a coupon before any additional spend.",
+        "description": "Repeat buyers whose purchases are heavily discount-driven. Their churn rate runs roughly 3x your Champions. Every discount you send reinforces the pattern.",
+        "strategy": "Do not offer them further discounts. Send educational and brand-story content to shift the relationship. Measure 60-day repeat rate without a coupon before you spend another dollar here.",
         "color": "#60A5FA",
     },
     "At Risk": {
-        "description": "Previously high-LTV buyers who have gone quiet in the last 60 to 150 days. Not churned yet. The highest-return intervention target in the engagement.",
+        "description": "Your previously high-LTV buyers who have gone quiet in the last 60 to 150 days. Not churned yet. The highest-return intervention target in your engagement.",
         "strategy": "Launch a personalized 3-touch win-back sequence referencing each customer's purchase history. No blanket discount. Target 15 to 20% reactivation in 30 days.",
         "color": "#F59E0B",
     },
@@ -496,21 +511,21 @@ for _, row in summary_df.iterrows():
     )
 
 ai_callout(
-    "The clustering algorithm returned 5 groups differentiated primarily by order frequency and recency. "
+    "The clustering algorithm returned 5 groups in your file, differentiated primarily by order frequency and recency. "
     "Initial labels: Cluster 0 (high frequency, recent), Cluster 1 (moderate frequency, moderate recency), "
     "Cluster 2 (low frequency, recent acquisition), Cluster 3 (moderate frequency, high discount usage), "
     "Cluster 4 (previously high value, now lapsed). RFM scores range from 3 to 15."
 )
 analyst_note(
-    "Claude got the math right: five clusters separated cleanly on RFM, and the centroid descriptions match "
-    "what's in the data. The issue is that 'Cluster 3' and 'Cluster 4' are not segments a founder can act on. "
-    "I relabeled them into business language and added discount_rate as a defining dimension for Cluster 3, "
-    "which becomes Price Hunters. On pure RFM they look like decent customers. Their churn rate, however, runs "
-    "roughly 3x the Champions segment, and almost every repeat purchase they make carries a discount. "
-    "Treating them as Loyalists in a retention campaign is a negative-margin move. "
-    "Cluster 4 becomes At Risk, which is where the money is in this engagement: these are previously high-LTV "
+    "Claude got the math right: your file separated cleanly into five clusters on RFM, and the centroid descriptions "
+    "match what's actually there. The issue is that 'Cluster 3' and 'Cluster 4' are not segments you can act on. "
+    "We relabeled them into business language and added discount_rate as a defining dimension for Cluster 3, which "
+    "becomes your Price Hunters. On pure RFM they look like decent customers. Their churn rate, however, runs roughly "
+    "3x your Champions, and almost every repeat purchase they make carries a discount. Treating them as Loyalists in "
+    "a retention campaign is a negative-margin move for you. "
+    "Cluster 4 becomes At Risk, which is where your money is in this engagement: these are previously high-LTV "
     "customers who have gone quiet, not customers who were never worth keeping. "
-    "The Stage 4 intervention list leans hard on this segment because it's the winnable group, and the Stage 5 "
+    "Your Stage 4 intervention list leans hard on this segment because it's your winnable group, and your Stage 5 "
     "memo leads with it for the same reason."
 )
 
@@ -521,22 +536,25 @@ st.markdown(
 )
 st.plotly_chart(segment_scatter(segmented), use_container_width=True, config=PLOTLY_CFG)
 analyst_note(
-    "The reason the segmentation is RFM-shaped and not a fancier clustering exercise is actionability. "
-    "RFM uses three fields a founder already understands (how recently they bought, how often, how much), "
-    "and the output is a handful of named groups the retention team can act on without a data scientist in the room. "
-    "A higher-dimensional cluster analysis would produce statistically tighter groupings that nobody could translate into "
-    "a Monday morning decision. Read the scatter left to right on recency and bottom to top on frequency, with bubble "
-    "size encoding lifetime revenue: <strong>Champions</strong> cluster tight in the upper-left corner (bought recently, "
-    "bought often, highest LTV bubbles), <strong>Loyalists</strong> sit just below them (consistent frequency, still recent), "
-    "<strong>Promising</strong> hugs the left edge low on the frequency axis (recent first purchase, not yet habit), "
-    "<strong>Price Hunters</strong> look mid-pack on RFM but carry a distinct discount signature underneath the dots, and "
-    "<strong>At Risk</strong> drifts to the right (previously active, now quiet, and still carrying large revenue bubbles). "
-    "The shape that matters most is the distance between Champions and At Risk: those are the same kind of customer at two "
-    "different moments in their lifecycle, and the gap between them is the recoverable revenue the engagement is built around. "
-    "Segment labels beat a raw customer-to-cluster mapping because they give the client's ops team a shared vocabulary, the "
-    "retention lead and the founder can argue about what to do with At Risk customers without ever looking at a cluster ID. "
-    "These labels feed directly into Stage 4, where the intervention list ranks customers by segment plus churn probability, "
-    "and into Stage 5, where the final memo leads with the At Risk cohort as the first Monday morning move."
+    "We shaped your segmentation around RFM, not a fancier clustering exercise, for one reason: actionability. "
+    "RFM uses three fields you already understand (how recently they bought, how often, and how much), and the output "
+    "is a handful of named groups your team can act on without a data scientist in the room. A higher-dimensional "
+    "cluster analysis would produce statistically tighter groupings that nobody on your team could translate into a "
+    "Monday morning decision. Read the scatter left to right on recency and bottom to top on frequency, with bubble "
+    "size encoding lifetime revenue: your <strong>Champions</strong> cluster tight in the upper-left corner (bought "
+    "recently, bought often, highest LTV bubbles), your <strong>Loyalists</strong> sit just below them (consistent "
+    "frequency, still recent), your <strong>Promising</strong> hug the left edge low on the frequency axis (recent "
+    "first purchase, not yet habit), your <strong>Price Hunters</strong> look mid-pack on RFM but carry a distinct "
+    "discount signature underneath the dots, and your <strong>At Risk</strong> drift to the right (previously active, "
+    "now quiet, still carrying large revenue bubbles). "
+    "The shape that matters most is the distance between your Champions and your At Risk: those are the same kind of "
+    "customer at two different moments in their lifecycle, and the gap between them is the recoverable revenue this "
+    "engagement is built around. "
+    "These named labels beat a raw customer-to-cluster mapping because they give your ops team a shared vocabulary. "
+    "Your retention lead and your founder can argue about what to do with At Risk customers without ever looking at a "
+    "cluster ID. The labels feed directly into Stage 4, where your intervention list ranks customers by segment plus "
+    "churn probability, and into Stage 5, where your final memo leads with the At Risk cohort as the first Monday "
+    "morning move."
 )
 st.markdown('</div>', unsafe_allow_html=True)
 
@@ -546,11 +564,11 @@ section_divider()
 stage_marker("Stage 4 of 5", "Churn Prediction Model")
 st.markdown("## Churn Prediction Model")
 st.markdown(
-    "The model turns the segmentation into a ranked list. A Random Forest scores every customer on churn probability, "
-    "which is then multiplied by lifetime revenue to produce an intervention priority, the 20 names the client should "
-    "call first. The two charts below show which features the model actually weighed and how the resulting risk scores "
-    "distribute across the file. The operational output is the intervention table further down, with a specific recommended "
-    "action on every row."
+    "The model turns your segmentation into a ranked list. A Random Forest scores every customer in your file on "
+    "churn probability, then multiplies that probability by lifetime revenue to produce an intervention priority, the "
+    "20 names you should call first. The two charts below show which features the model weighed most heavily and how "
+    "your resulting risk scores distribute across the file. The operational output you actually use is the intervention "
+    "table further down, with a specific recommended action on every row."
 )
 
 with st.spinner("Training model..."):
@@ -563,28 +581,28 @@ with col_r:
     st.plotly_chart(score_distribution_chart(scored), use_container_width=True, config=PLOTLY_CFG)
 
 ai_callout(
-    "The model weighted email engagement (opens and clicks) as the top predictive feature, "
-    "followed by days_since_last_order and total_orders. "
-    "Discount rate ranked 4th: higher discount usage correlates with higher churn probability. "
-    "Model accuracy on hold-out set: approximately 78%."
+    "The model weighted email engagement (opens and clicks) as the top predictive feature in your file, followed by "
+    "<code>days_since_last_order</code> and <code>total_orders</code>. Discount rate ranked 4th: higher discount usage "
+    "correlates with higher churn probability. Model accuracy on the hold-out set: approximately 78%."
 )
 analyst_note(
-    "The feature ranking is defensible, and flagging discount_rate as a churn signal is the right call: "
-    "price-sensitive customers churn faster, which is consistent with the Price Hunter profile from Stage 3. "
-    "The correction is the one previewed in Stage 1. Email engagement as the top feature is true on this training set, "
-    "but it's partially an artifact of the 30-day window in <code>email_opens_30d</code> and <code>email_clicks_30d</code>. "
-    "Newer customers haven't had time to rack up opens, so the model reads them as disengaged when they're simply new. "
-    "I restricted training to customers with at least 60 days of tenure, then applied the fitted model to the full "
-    "population. That stabilizes the ranking and stops the model from mislabeling last month's acquisitions as churn risks. "
-    "The 78% accuracy figure is directionally fine, but don't sell it as the headline. The operational value here is the "
-    "rank order, which is what the Stage 4 intervention list is actually built from."
+    "The feature ranking is defensible, and flagging discount_rate as a churn signal is the right call for your file: "
+    "price-sensitive customers churn faster, which is consistent with the Price Hunter profile we named in Stage 3. "
+    "The correction is the one we previewed in Stage 1. Email engagement as the top feature is true on this training "
+    "set, but it's partially an artifact of the 30-day window in <code>email_opens_30d</code> and "
+    "<code>email_clicks_30d</code>. Your newer customers haven't had time to rack up opens, so the model reads them as "
+    "disengaged when they're simply new. We restricted training to customers with at least 60 days of tenure, then "
+    "applied the fitted model to your full population. That stabilizes the ranking and stops the model from mislabeling "
+    "last month's acquisitions as your churn risks. "
+    "The 78% accuracy figure is directionally fine, but don't let it become the headline. The operational value for you "
+    "is the rank order, which is what your intervention list below is actually built from."
 )
 
-st.markdown("### Where to Spend the Next Retention Dollar: Top 20 Customers")
+st.markdown("### Where to spend your next retention dollar: your top 20 customers")
 st.markdown(
-    "Ranked by **LTV x churn probability**. These are the 20 customers where a successful "
-    "intervention has the highest expected revenue impact. Each row includes a specific recommended "
-    "action derived from that customer's segment, recency, category history, and discount behaviour."
+    "Ranked by **LTV x churn probability**. These are the 20 customers where a successful intervention delivers the "
+    "highest expected revenue impact for you. Each row includes a specific recommended action derived from that "
+    "customer's segment, recency, category history, and discount behavior."
 )
 _ilist = intervention_list(scored)
 st.markdown('<div class="intervention-table">', unsafe_allow_html=True)
@@ -616,15 +634,15 @@ st.dataframe(
 )
 st.markdown('</div>', unsafe_allow_html=True)
 analyst_note(
-    "This table is the operational deliverable of the engagement. Champions are excluded from the top of the list "
-    "by design: their churn probability is low enough that intervention dollars spent here have a low expected return, "
-    "even with high LTV. The list is dominated by At Risk customers, which confirms the segmentation: these are "
-    "high-LTV buyers who have gone quiet, not customers who were never going to stick. "
-    "The recommended action is a three-touch, 21-day personalized win-back sequence keyed to each customer's purchase "
-    "history. No blanket discount. A discount on this cohort teaches exactly the wrong behavior and converts your "
-    "highest-value buyers into Price Hunters. "
-    "Success looks like a 15-20% reactivation rate on this list inside 30 days, which on the At Risk LTV base is the "
-    "single largest revenue lever available to the brand this quarter."
+    "This table is the operational deliverable of your engagement. Your Champions are excluded from the top of the "
+    "list by design: their churn probability is low enough that intervention dollars spent here have a low expected "
+    "return, even with their high LTV. The list is dominated by At Risk customers, which confirms your segmentation: "
+    "these are your high-LTV buyers who have gone quiet, not customers who were never going to stick. "
+    "The recommended action on each row is a three-touch, 21-day personalized win-back sequence keyed to that customer's "
+    "purchase history. No blanket discount. A discount on this cohort teaches exactly the wrong behavior and converts "
+    "your highest-value buyers into Price Hunters. "
+    "Success looks like a 15 to 20% reactivation rate on this list inside 30 days, which on your At Risk LTV base is "
+    "the single largest revenue lever available to you this quarter."
 )
 
 section_divider()
@@ -633,10 +651,10 @@ section_divider()
 stage_marker("Stage 5 of 5", "Recommendation Memo")
 st.markdown("## Recommendation Memo")
 st.markdown(
-    "The memo is the deliverable the founder keeps. It consolidates the entire engagement into three findings, three "
-    "numbers, and three actions with specific timelines, formatted for the founder to forward to their retention lead "
-    "without editing. Below, in order: the unedited AI first draft (collapsed), the analyst's three edits to that draft, "
-    "and the final memo as delivered to the client."
+    "The memo is the deliverable you keep. It consolidates the entire engagement into three findings, three numbers, "
+    "and three actions with specific timelines, written for you to forward to your retention lead without editing a "
+    "word. Below, in order: the unedited AI first draft (collapsed), the three edits we made to that draft, and the "
+    "final memo as delivered to you."
 )
 
 with st.expander("AI first draft (unedited), expand to view", expanded=False):
@@ -665,16 +683,16 @@ with st.expander("AI first draft (unedited), expand to view", expanded=False):
     )
 
 analyst_note(
-    "Three edits to the first draft, each worth naming. "
-    "First, the draft led with overall churn rate (38%). That's a description, not a decision. We reordered to lead with "
-    "the At Risk win-back, because the winnable group inside that rate is the action the client can take on Monday, not "
-    "the headline number itself. "
-    "Second, Claude recommended a loyalty program as Action 2. We cut it. Loyalty programs solve a different problem, add "
-    "operational overhead a $1.5M brand can't absorb, and distract from the three moves that actually fix the retention "
-    "economics. The reallocation of paid social win-back budget is the higher-leverage Action 2. "
-    "Third, the timelines read as 'in the coming weeks,' which is not a timeline. Every vague phrase got replaced with a "
-    "specific window (this week, 30 days, 60 days) tied to a specific owner action. "
-    "The final memo below is the version delivered to the client."
+    "Three edits we made to the first draft before it reached you, each worth naming. "
+    "First, the draft led with your overall churn rate (38%). That's a description, not a decision. We reordered to "
+    "lead with your At Risk win-back, because the winnable group inside that rate is the action you can take on Monday, "
+    "not the headline number itself. "
+    "Second, Claude recommended a loyalty program as Action 2. We cut it. Loyalty programs solve a different problem, "
+    "add operational overhead your business can't absorb at this stage, and distract from the three moves that actually "
+    "fix your retention economics. Reallocating your paid social win-back budget is the higher-leverage Action 2. "
+    "Third, the timelines read as 'in the coming weeks,' which is not a timeline. Every vague phrase got replaced with "
+    "a specific window (this week, 30 days, 60 days) tied to a specific owner action you can assign. "
+    "The final memo below is the version we delivered to you."
 )
 
 st.markdown("### Final memo (as delivered)")
@@ -771,26 +789,25 @@ st.markdown(
       <h2 class="close-section__title">Here is what to do with it</h2>
 
       <div class="close-beat">
-        <div class="close-beat__label">Where this client was thirty minutes ago</div>
+        <div class="close-beat__label">You have now seen the whole engagement</div>
         <p class="close-beat__body">
-          Two CSV exports, no documentation, no view of which customers carry the business and which ones are
-          quietly walking out the door. A founder watching the top-line number go sideways and no honest answer
-          as to why. If that reads like your Monday, the rest of this page is the engagement written out in
-          full so you can decide whether to run it.
+          Two CSVs in, a named segmentation, a churn score on every account, a 20-name intervention list,
+          and a one-page memo out. If that maps to a decision sitting on your desk this quarter, the rest of
+          this section is how you put it on your calendar.
         </p>
       </div>
 
       <div class="close-beat">
-        <div class="close-beat__label">What a Kinetric engagement puts on your desk</div>
+        <div class="close-beat__label">What lands on your desk</div>
         <p class="close-beat__body close-beat__body--lede">
-          Four deliverables. Each one is a working tool a retention lead can pick up Monday morning and
-          operate without a translation layer.
+          Four deliverables. Each one a working tool your retention lead picks up Monday morning and operates
+          without a translation layer.
         </p>
         <ul class="close-beat__list">
           <li><strong>A segmented customer base.</strong> Five named segments (Champions, Loyalists, Promising, Price Hunters, At Risk) with a plain-English playbook per segment covering message, offer, cadence, and the outcome you are paying for.</li>
-          <li><strong>A churn-risk score for every customer.</strong> 0 to 100, trained on your own repeat behavior, ranked by intervention priority so retention spend lands on the customers where it earns and leaves the rest alone.</li>
-          <li><strong>A prioritized win-back list.</strong> {at_risk_count} At Risk customers on this engagement, {top20_share_int}% of revenue concentrated at the top of the file, specific names and emails to work this week, a recommended action per customer, an expected reactivation rate to measure against.</li>
-          <li><strong>A written recommendation memo.</strong> Three findings, three numbers, three actions with owner-named timelines. One page, forward-ready. The founder sends it to the retention lead without editing.</li>
+          <li><strong>A churn-risk score for every customer.</strong> 0 to 100, trained on your own repeat behavior, ranked by intervention priority so your retention spend lands on the accounts where it earns and leaves the rest alone.</li>
+          <li><strong>A prioritized win-back list.</strong> {at_risk_count} At Risk customers in your file, {top20_share_int}% of revenue concentrated at the top, specific names and emails for your retention lead to work this week, a recommended action per customer, an expected reactivation rate to measure against.</li>
+          <li><strong>A one-page founder memo.</strong> Three findings, three numbers, three actions with owner-named timelines. Forward-ready. You send it to your retention lead without editing.</li>
         </ul>
       </div>
 
@@ -798,12 +815,12 @@ st.markdown(
         <div class="close-beat__label">Two ways to run it. Pick the one that describes you.</div>
         <div class="close-paths">
           <div class="close-path">
-            <div class="close-path__tag">Option A</div>
+            <div class="close-path__tag">Option A · $1,500 fixed</div>
             <h3 class="close-path__name">One-time audit</h3>
             <p class="close-path__body">
-              Kinetric delivers every output above as a single fixed-scope engagement, roughly four weeks from
-              kickoff to handoff. You own the segment playbooks, the scoring model, and the intervention list
-              from day one and operate them yourselves from that point forward. Refreshes happen when you want
+              You get every output above as a single fixed-scope engagement, roughly four weeks from kickoff
+              to handoff. You own the segment playbooks, the scoring model, and the intervention list from
+              day one and operate them yourselves from that point forward. Refreshes happen when you want
               them to happen, at whatever cadence you decide.
             </p>
             <div class="close-path__fit-label">You are a fit if</div>
@@ -815,18 +832,18 @@ st.markdown(
             </ul>
           </div>
           <div class="close-path">
-            <div class="close-path__tag">Option B</div>
+            <div class="close-path__tag">Option B · $2,000 to $3,500 / month</div>
             <h3 class="close-path__name">Ongoing retainer</h3>
             <p class="close-path__body">
-              Kinetric refreshes the segmentation and churn scores monthly, owns the At Risk intervention
+              Kinetric refreshes your segmentation and churn scores monthly, owns your At Risk intervention
               tracking end to end, and expands the analysis as new data sources come online. Klaviyo flows
               and open rates month two. Paid media attribution month three. Review sentiment and post-purchase
-              survey signal after that. The founder gets a monthly memo; the retention lead gets a working
-              list every Monday.
+              survey signal after that. You get a monthly memo; your retention lead gets a working list
+              every Monday.
             </p>
             <div class="close-path__fit-label">You are a fit if</div>
             <ul class="close-path__fit-list">
-              <li>Analytics capacity is thin and the founder is the de facto analyst today</li>
+              <li>Analytics capacity is thin and you are the de facto analyst today</li>
               <li>You have the data but no one whose job is to turn it into a weekly decision</li>
               <li>You want the outputs maintained, not just delivered once and left to rot</li>
               <li>You would rather expand coverage over time than scope a second engagement from scratch</li>
@@ -844,20 +861,20 @@ st.markdown(
     f'''
     <div class="leavebehind">
       <div class="leavebehind__eyebrow">Client Leave-Behind</div>
-      <h3 class="leavebehind__title">One page. Four numbers. Three moves.</h3>
+      <h3 class="leavebehind__title">One page. Three numbers. Three moves.</h3>
 
       <div class="leavebehind__numbers">
         <div class="leavebehind__num">
           <div class="leavebehind__num-value">{top20_share_int}%</div>
-          <div class="leavebehind__num-label">of revenue from the top 20% of customers. Retention spend currently flat across the file.</div>
+          <div class="leavebehind__num-label">of your revenue comes from the top 20% of your customers. Your retention spend is currently flat across the file.</div>
         </div>
         <div class="leavebehind__num">
           <div class="leavebehind__num-value">${at_risk_ltv/1000:,.0f}K</div>
-          <div class="leavebehind__num-label">of lifetime revenue sitting in {at_risk_count} At Risk customers who have gone quiet.</div>
+          <div class="leavebehind__num-label">of lifetime revenue sitting in your {at_risk_count} At Risk customers who have gone quiet.</div>
         </div>
         <div class="leavebehind__num">
           <div class="leavebehind__num-value">2.2×</div>
-          <div class="leavebehind__num-label">retention gap between paid social (22%) and email/organic cohorts. Subsidized by current spend mix.</div>
+          <div class="leavebehind__num-label">retention gap between your paid social (22%) and email/organic cohorts. Subsidized by your current spend mix.</div>
         </div>
       </div>
 
