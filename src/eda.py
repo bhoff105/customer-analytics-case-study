@@ -3,6 +3,78 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 
+# ── Kinetric chart palette (mirrors assets/style.css) ────────────────────────
+KIN_BG         = "#101626"
+KIN_PAPER      = "#101626"
+KIN_TEXT       = "#E8EDF5"
+KIN_TEXT_DIM   = "#B5C2D6"
+KIN_MUTED      = "#7E95B0"
+KIN_BORDER     = "#243350"
+KIN_GRID       = "rgba(126, 149, 176, 0.14)"
+KIN_ACCENT     = "#2DD4BF"
+KIN_ACCENT_SOFT= "rgba(45, 212, 191, 0.18)"
+KIN_BLUE       = "#60A5FA"
+KIN_BLUE_SOFT  = "rgba(96, 165, 250, 0.35)"
+KIN_AMBER      = "#F59E0B"
+KIN_RED        = "#EF4444"
+KIN_VIOLET     = "#A78BFA"
+
+KIN_FONT = dict(family="DM Sans, system-ui, sans-serif", color=KIN_TEXT_DIM, size=12)
+KIN_MONO = dict(family="IBM Plex Mono, monospace", color=KIN_MUTED, size=11)
+
+# Chart config applied globally — hides modebar
+CHART_CONFIG = {"displayModeBar": False, "displaylogo": False, "staticPlot": False}
+
+
+def _apply_base_layout(fig: go.Figure, height: int = 380) -> go.Figure:
+    """Shared base styling for every chart in the case study."""
+    fig.update_layout(
+        height=height,
+        margin=dict(t=48, b=48, l=56, r=32),
+        plot_bgcolor=KIN_BG,
+        paper_bgcolor=KIN_PAPER,
+        font=KIN_FONT,
+        title=dict(
+            font=dict(family="DM Sans, sans-serif", size=15, color=KIN_TEXT),
+            x=0.01, xanchor="left", y=0.96,
+        ),
+        legend=dict(
+            bgcolor="rgba(0,0,0,0)",
+            bordercolor=KIN_BORDER,
+            borderwidth=0,
+            font=dict(family="DM Sans, sans-serif", size=11, color=KIN_TEXT_DIM),
+        ),
+        hoverlabel=dict(
+            bgcolor="#0B0F1A",
+            bordercolor=KIN_ACCENT,
+            font=dict(family="IBM Plex Mono, monospace", size=11, color=KIN_TEXT),
+        ),
+        modebar=dict(remove=[
+            "zoom", "pan", "select", "lasso2d", "zoomIn", "zoomOut",
+            "autoScale", "resetScale", "toImage"
+        ]),
+    )
+    fig.update_xaxes(
+        showgrid=False,
+        zeroline=False,
+        showline=True,
+        linecolor=KIN_BORDER,
+        linewidth=1,
+        tickfont=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_MUTED),
+        title_font=dict(family="DM Sans, sans-serif", size=11, color=KIN_MUTED),
+    )
+    fig.update_yaxes(
+        showgrid=True,
+        gridcolor=KIN_GRID,
+        gridwidth=1,
+        zeroline=False,
+        showline=False,
+        tickfont=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_MUTED),
+        title_font=dict(family="DM Sans, sans-serif", size=11, color=KIN_MUTED),
+    )
+    return fig
+
+
 def revenue_concentration_chart(customers: pd.DataFrame) -> go.Figure:
     """Pareto: cumulative revenue share by customer percentile."""
     sorted_rev = customers["total_revenue"].sort_values(ascending=False).reset_index(drop=True)
@@ -13,26 +85,26 @@ def revenue_concentration_chart(customers: pd.DataFrame) -> go.Figure:
     fig.add_trace(go.Scatter(
         x=pct_customers, y=cumulative,
         mode="lines", fill="tozeroy",
-        line=dict(color="#3B82F6", width=2),
-        fillcolor="rgba(59,130,246,0.1)",
-        name="Cumulative Revenue"
+        line=dict(color=KIN_ACCENT, width=2.25),
+        fillcolor=KIN_ACCENT_SOFT,
+        name="Cumulative Revenue",
+        hovertemplate="<b>%{x:.0f}%</b> of customers<br>%{y:.1f}% of revenue<extra></extra>",
     ))
+    # 20% marker lines
+    y_at_20 = cumulative.iloc[int(len(cumulative) * 0.2) - 1]
     fig.add_shape(type="line", x0=20, x1=20, y0=0, y1=100,
-                  line=dict(color="#F59E0B", dash="dash", width=1.5))
-    fig.add_shape(type="line", x0=0, x1=20, y0=cumulative.iloc[int(len(cumulative)*0.2)-1],
-                  y1=cumulative.iloc[int(len(cumulative)*0.2)-1],
-                  line=dict(color="#F59E0B", dash="dash", width=1.5))
+                  line=dict(color=KIN_AMBER, dash="dot", width=1.25))
+    fig.add_shape(type="line", x0=0, x1=20, y0=y_at_20, y1=y_at_20,
+                  line=dict(color=KIN_AMBER, dash="dot", width=1.25))
+
     fig.update_layout(
-        title="Revenue Concentration — Top 20% of Customers",
+        title="Top 20% of Customers Drive ~53% of Revenue",
         xaxis_title="Cumulative % of Customers",
         yaxis_title="Cumulative % of Revenue",
-        height=380,
-        margin=dict(t=50, b=40, l=50, r=20),
-        plot_bgcolor="white",
-        paper_bgcolor="white",
     )
-    fig.update_xaxes(showgrid=True, gridcolor="#F3F4F6", range=[0, 100])
-    fig.update_yaxes(showgrid=True, gridcolor="#F3F4F6", range=[0, 101])
+    fig = _apply_base_layout(fig, height=380)
+    fig.update_xaxes(range=[0, 100])
+    fig.update_yaxes(range=[0, 101])
     return fig
 
 
@@ -42,35 +114,40 @@ def acquisition_retention_chart(customers: pd.DataFrame) -> go.Figure:
         volume=("customer_id", "count"),
         retention_rate=("is_churned", lambda x: 1 - x.mean())
     ).reset_index()
+    grouped = grouped.sort_values("volume", ascending=False)
 
     fig = go.Figure()
     fig.add_trace(go.Bar(
         x=grouped["acquisition_source"],
         y=grouped["volume"],
         name="Customer Volume",
-        marker_color="#BFDBFE",
-        yaxis="y"
+        marker=dict(color=KIN_BLUE_SOFT, line=dict(color=KIN_BLUE, width=1)),
+        yaxis="y",
+        hovertemplate="<b>%{x}</b><br>Volume: %{y:,}<extra></extra>",
     ))
     fig.add_trace(go.Scatter(
         x=grouped["acquisition_source"],
         y=grouped["retention_rate"] * 100,
         name="Retention Rate (%)",
         mode="lines+markers",
-        marker=dict(size=9, color="#F59E0B"),
-        line=dict(color="#F59E0B", width=2),
-        yaxis="y2"
+        marker=dict(size=10, color=KIN_AMBER, line=dict(color=KIN_BG, width=1)),
+        line=dict(color=KIN_AMBER, width=2.25),
+        yaxis="y2",
+        hovertemplate="<b>%{x}</b><br>Retention: %{y:.1f}%<extra></extra>",
     ))
     fig.update_layout(
-        title="Acquisition Volume vs. Retention Rate by Channel",
-        yaxis=dict(title="Customers Acquired", showgrid=True, gridcolor="#F3F4F6"),
-        yaxis2=dict(title="Retention Rate (%)", overlaying="y", side="right", range=[0, 100]),
-        height=380,
-        margin=dict(t=50, b=40, l=50, r=60),
-        plot_bgcolor="white",
-        paper_bgcolor="white",
-        legend=dict(x=0.01, y=0.99),
+        title="Paid Social Acquires the Most Customers and Retains the Fewest",
+        yaxis=dict(title="Customers Acquired"),
+        yaxis2=dict(
+            title="Retention Rate (%)", overlaying="y", side="right",
+            range=[0, 100], showgrid=False, zeroline=False, showline=False,
+            tickfont=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_AMBER),
+            title_font=dict(family="DM Sans, sans-serif", size=11, color=KIN_AMBER),
+        ),
+        legend=dict(x=0.01, y=0.99, orientation="h"),
         barmode="group",
     )
+    fig = _apply_base_layout(fig, height=400)
     return fig
 
 
@@ -80,18 +157,20 @@ def monthly_revenue_chart(orders: pd.DataFrame) -> go.Figure:
     orders["month"] = orders["order_date"].dt.to_period("M").dt.to_timestamp()
     monthly = orders.groupby("month")["revenue"].sum().reset_index()
 
-    fig = px.bar(
-        monthly, x="month", y="revenue",
-        title="Monthly Revenue — 18-Month Trend",
-        color_discrete_sequence=["#3B82F6"],
-    )
+    fig = go.Figure()
+    fig.add_trace(go.Bar(
+        x=monthly["month"], y=monthly["revenue"],
+        marker=dict(color=KIN_ACCENT_SOFT, line=dict(color=KIN_ACCENT, width=1)),
+        hovertemplate="<b>%{x|%b %Y}</b><br>Revenue: $%{y:,.0f}<extra></extra>",
+    ))
     fig.update_layout(
-        xaxis_title="", yaxis_title="Revenue ($)",
-        height=360, margin=dict(t=50, b=40, l=50, r=20),
-        plot_bgcolor="white", paper_bgcolor="white",
+        title="Off-Peak Revenue Is Flat: No Compounding from the Existing Base",
+        xaxis_title="",
+        yaxis_title="Revenue ($)",
+        showlegend=False,
     )
+    fig = _apply_base_layout(fig, height=360)
     fig.update_xaxes(showgrid=False)
-    fig.update_yaxes(showgrid=True, gridcolor="#F3F4F6")
     return fig
 
 
@@ -106,29 +185,46 @@ def category_performance_chart(customers: pd.DataFrame, orders: pd.DataFrame) ->
     grouped = merged.groupby("product_category").agg(
         repeat_rate=("total_orders", lambda x: (x > 1).mean()),
         avg_aov=("avg_order_value", "mean")
-    ).reset_index()
+    ).reset_index().sort_values("repeat_rate", ascending=False)
+
+    # Highlight any category whose repeat rate is meaningfully below the others (the Gifts trough)
+    median_rate = grouped["repeat_rate"].median()
+    bar_colors = [
+        KIN_RED if r < median_rate * 0.5 else KIN_ACCENT
+        for r in grouped["repeat_rate"]
+    ]
+    bar_line_colors = [
+        KIN_RED if r < median_rate * 0.5 else KIN_ACCENT
+        for r in grouped["repeat_rate"]
+    ]
 
     fig = go.Figure()
     fig.add_trace(go.Bar(
         x=grouped["product_category"], y=grouped["repeat_rate"] * 100,
         name="Repeat Purchase Rate (%)",
-        marker_color="#3B82F6",
+        marker=dict(color=bar_colors, line=dict(color=bar_line_colors, width=1)),
+        opacity=0.85,
+        hovertemplate="<b>%{x}</b><br>Repeat rate: %{y:.1f}%<extra></extra>",
     ))
     fig.add_trace(go.Scatter(
         x=grouped["product_category"], y=grouped["avg_aov"],
         name="Avg Order Value ($)",
         mode="lines+markers",
-        marker=dict(size=9, color="#F59E0B"),
-        line=dict(color="#F59E0B", width=2),
-        yaxis="y2"
+        marker=dict(size=10, color=KIN_AMBER, line=dict(color=KIN_BG, width=1)),
+        line=dict(color=KIN_AMBER, width=2.25),
+        yaxis="y2",
+        hovertemplate="<b>%{x}</b><br>AOV: $%{y:.0f}<extra></extra>",
     ))
     fig.update_layout(
-        title="Category Performance — Repeat Rate vs. AOV",
-        yaxis=dict(title="Repeat Purchase Rate (%)", showgrid=True, gridcolor="#F3F4F6"),
-        yaxis2=dict(title="Avg Order Value ($)", overlaying="y", side="right"),
-        height=380,
-        margin=dict(t=50, b=40, l=50, r=60),
-        plot_bgcolor="white",
-        paper_bgcolor="white",
+        title="Gifts Buyers Repeat at ~17%. Every Other Category Clears 70%",
+        yaxis=dict(title="Repeat Purchase Rate (%)"),
+        yaxis2=dict(
+            title="Avg Order Value ($)", overlaying="y", side="right",
+            showgrid=False, zeroline=False, showline=False,
+            tickfont=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_AMBER),
+            title_font=dict(family="DM Sans, sans-serif", size=11, color=KIN_AMBER),
+        ),
+        legend=dict(x=0.01, y=0.99, orientation="h"),
     )
+    fig = _apply_base_layout(fig, height=400)
     return fig

@@ -1,221 +1,281 @@
-customer_id,acquisition_source,customer_state,first_order_date,last_order_date,total_orders,total_revenue,avg_order_value,days_since_last_order,days_as_customer,top_category,email_opens_30d,email_clicks_30d,discount_rate,is_churned
-CUST-0001,paid_social,MA,2023-02-07,2024-02-11,7,767.37,109.62,139,369,Apparel,7,3,0.03,True
-CUST-0002,referral,CA,2023-08-12,2024-05-28,8,904.14,113.02,32,290,Apparel,7,1,0.07,False
-CUST-0003,organic_search,GA,2023-04-20,2024-06-08,9,964.41,107.16,21,415,Fitness,9,0,0.06,False
-CUST-0004,email,OH,2023-02-01,2024-04-23,9,979.57,108.84,67,447,Home & Kitchen,6,2,-0.11,False
-CUST-0005,organic_search,MA,2023-01-10,2023-02-10,2,203.14,101.57,505,30,Fitness,9,2,0.06,True
-CUST-0006,paid_social,FL,2023-04-12,2024-06-06,7,722.33,103.19,23,421,Beauty & Wellness,9,1,0.1,False
-CUST-0007,paid_social,IL,2023-03-22,2024-06-05,11,1345.25,122.3,24,440,Gifts,8,2,0.03,False
-CUST-0008,referral,CO,2023-09-28,2024-06-05,5,519.47,103.89,24,251,Beauty & Wellness,4,3,0.03,False
-CUST-0009,referral,TX,2023-06-03,2024-04-24,4,488.15,122.04,66,326,Beauty & Wellness,4,2,0.04,False
-CUST-0010,referral,NY,2023-05-21,2024-05-05,9,944.73,104.97,55,349,Beauty & Wellness,7,2,0.05,False
-CUST-0011,email,TX,2023-02-24,2024-04-29,7,715.88,102.27,61,430,Home & Kitchen,12,2,0.01,False
-CUST-0012,email,WA,2023-06-30,2024-01-18,4,540.96,135.24,163,202,Beauty & Wellness,5,0,0.03,True
-CUST-0013,referral,CA,2023-03-09,2024-02-11,3,235.98,78.66,139,338,Gifts,8,1,0.09,True
-CUST-0014,direct,WA,2023-05-16,2024-04-30,4,386.65,96.66,60,349,Gifts,8,2,0.06,False
-CUST-0015,paid_social,TX,2023-01-17,2024-06-07,6,682.06,113.68,22,507,Gifts,7,1,0.04,False
-CUST-0016,email,OH,2023-01-04,2024-03-15,5,551.55,110.31,106,436,Beauty & Wellness,9,3,0.13,True
-CUST-0017,paid_social,OH,2023-01-10,2024-06-29,8,953.18,119.15,0,535,Home & Kitchen,7,1,-0.01,False
-CUST-0018,paid_social,TX,2023-04-03,2024-06-04,8,871.9,108.99,25,428,Fitness,7,4,0.13,False
-CUST-0019,organic_search,NY,2023-01-01,2024-03-18,8,835.06,104.38,103,442,Beauty & Wellness,10,2,0.05,True
-CUST-0020,organic_search,FL,2023-04-13,2024-06-09,6,714.79,119.13,20,423,Gifts,8,1,0.06,False
-CUST-0021,organic_search,TX,2023-02-08,2024-04-16,6,718.13,119.69,74,433,Home & Kitchen,11,7,0.09,False
-CUST-0022,organic_search,NY,2023-02-27,2024-06-29,10,1186.84,118.68,0,488,Beauty & Wellness,5,1,0.06,False
-CUST-0023,email,TX,2023-04-07,2024-03-08,4,373.99,93.5,113,335,Apparel,12,2,0.11,True
-CUST-0024,direct,NY,2023-01-10,2024-03-09,6,516.73,86.12,112,424,Beauty & Wellness,6,1,0.11,True
-CUST-0025,organic_search,NY,2023-02-22,2024-06-25,9,1071.95,119.11,4,488,Home & Kitchen,5,3,-0.04,False
-CUST-0026,referral,NY,2023-03-23,2024-01-21,4,295.87,73.97,160,303,Apparel,10,1,0.16,True
-CUST-0027,referral,FL,2023-05-31,2024-04-21,4,376.94,94.23,69,326,Fitness,5,1,0.13,False
-CUST-0028,organic_search,IL,2024-01-28,2024-02-03,2,193.53,96.77,147,5,Fitness,7,2,0.07,True
-CUST-0029,organic_search,FL,2023-05-19,2023-05-19,1,65.8,65.8,407,0,Beauty & Wellness,4,1,0.15,True
-CUST-0030,email,IL,2023-05-15,2024-06-07,5,440.38,88.08,22,388,Apparel,5,1,0.1,False
-CUST-0031,email,IL,2023-04-24,2024-02-16,6,572.48,95.41,134,298,Gifts,6,0,0.07,True
-CUST-0032,organic_search,CA,2023-09-08,2024-02-28,3,299.13,99.71,123,172,Apparel,3,1,0.14,True
-CUST-0033,email,NY,2023-01-01,2023-07-31,2,215.83,107.92,334,210,Home & Kitchen,9,1,0.08,True
-CUST-0034,paid_social,GA,2023-03-13,2023-03-13,1,64.17,64.17,474,0,Home & Kitchen,11,1,0.15,True
-CUST-0035,email,GA,2023-07-28,2024-03-03,4,361.17,90.29,118,219,Home & Kitchen,7,2,0.14,True
-CUST-0036,paid_social,GA,2023-06-09,2023-11-16,2,222.04,111.02,226,159,Home & Kitchen,2,2,0.16,True
-CUST-0037,referral,CA,2023-01-06,2024-01-02,7,465.62,66.52,179,361,Apparel,3,1,0.11,True
-CUST-0038,paid_social,NY,2023-11-22,2024-01-09,3,297.6,99.2,172,47,Apparel,4,1,0.02,True
-CUST-0039,paid_social,IL,2023-06-12,2024-05-28,8,652.58,81.57,32,350,Home & Kitchen,3,1,0.13,False
-CUST-0040,paid_social,CO,2023-01-15,2023-11-13,7,506.15,72.31,229,301,Beauty & Wellness,4,1,0.11,True
-CUST-0041,paid_social,MA,2023-02-14,2024-06-23,8,668.81,83.6,6,495,Home & Kitchen,8,1,0.11,False
-CUST-0042,organic_search,TX,2023-01-19,2024-06-29,3,291.0,97.0,0,526,Home & Kitchen,7,2,0.18,False
-CUST-0043,email,WA,2023-04-18,2024-06-17,7,609.82,87.12,12,426,Apparel,8,3,0.16,False
-CUST-0044,paid_social,CA,2023-04-27,2024-06-03,6,537.18,89.53,26,403,Fitness,3,1,0.16,False
-CUST-0045,email,OH,2024-05-10,2024-06-08,2,235.34,117.67,21,29,Gifts,4,3,0.09,False
-CUST-0046,email,NY,2023-05-24,2023-10-22,2,163.55,81.78,251,151,Apparel,9,1,0.08,True
-CUST-0047,email,WA,2023-05-17,2024-03-24,4,345.0,86.25,97,312,Beauty & Wellness,9,1,0.17,True
-CUST-0048,email,MA,2023-01-30,2024-04-04,5,465.03,93.01,86,429,Beauty & Wellness,6,1,0.12,False
-CUST-0049,email,CO,2023-10-14,2024-04-15,2,200.27,100.14,75,184,Home & Kitchen,4,0,0.06,False
-CUST-0050,paid_social,IL,2023-07-28,2024-02-18,4,445.37,111.34,132,204,Fitness,4,3,0.04,True
-CUST-0051,referral,GA,2023-11-25,2023-11-25,1,83.51,83.51,217,0,Apparel,8,0,0.16,True
-CUST-0052,email,MA,2023-08-02,2024-05-09,2,209.31,104.66,51,281,Home & Kitchen,6,3,0.22,False
-CUST-0053,email,NY,2023-02-14,2024-06-09,4,430.6,107.65,20,481,Home & Kitchen,5,0,0.03,False
-CUST-0054,email,IL,2023-07-27,2023-07-27,1,58.6,58.6,338,0,Beauty & Wellness,4,0,0.1,True
-CUST-0055,email,IL,2023-03-02,2023-12-26,3,321.96,107.32,186,298,Fitness,7,4,0.17,True
-CUST-0056,organic_search,GA,2023-05-22,2023-05-22,1,42.68,42.68,404,0,Beauty & Wellness,8,0,0.1,True
-CUST-0057,referral,MA,2023-02-13,2024-02-04,6,561.46,93.58,146,355,Home & Kitchen,5,3,0.06,True
-CUST-0058,organic_search,GA,2023-01-11,2023-02-08,2,149.31,74.66,507,27,Home & Kitchen,8,1,0.04,True
-CUST-0059,referral,CO,2023-04-11,2024-02-15,3,336.15,112.05,135,310,Home & Kitchen,6,0,0.16,True
-CUST-0060,email,NY,2023-06-28,2023-06-28,1,83.33,83.33,367,0,Home & Kitchen,10,2,0.04,True
-CUST-0061,referral,GA,2023-08-24,2024-05-22,3,293.62,97.87,38,272,Apparel,7,4,0.13,False
-CUST-0062,referral,CA,2023-01-22,2024-06-08,7,541.58,77.37,21,502,Home & Kitchen,5,3,0.11,False
-CUST-0063,organic_search,OH,2023-10-16,2023-10-16,1,104.34,104.34,257,0,Apparel,8,2,0.04,True
-CUST-0064,organic_search,FL,2023-01-27,2023-09-26,5,412.99,82.6,277,242,Fitness,5,1,0.11,True
-CUST-0065,paid_social,NY,2023-01-26,2024-06-12,9,931.04,103.45,17,503,Fitness,5,0,0.08,False
-CUST-0066,email,WA,2023-10-30,2024-01-13,2,176.61,88.31,168,75,Home & Kitchen,1,0,0.09,True
-CUST-0067,paid_social,MA,2023-04-01,2023-04-01,1,108.95,108.95,455,0,Beauty & Wellness,5,1,0.19,True
-CUST-0068,paid_social,WA,2023-07-29,2023-07-29,1,79.77,79.77,336,0,Apparel,4,0,0.19,True
-CUST-0069,paid_social,CA,2023-02-04,2024-02-12,3,247.86,82.62,138,372,Beauty & Wellness,5,1,0.21,True
-CUST-0070,referral,CA,2023-07-18,2023-12-16,3,255.42,85.14,196,150,Home & Kitchen,5,0,0.26,True
-CUST-0071,direct,CA,2023-07-23,2023-07-23,1,107.37,107.37,342,0,Beauty & Wellness,10,1,0.19,True
-CUST-0072,direct,NY,2023-03-28,2023-03-31,2,165.74,82.87,456,2,Beauty & Wellness,1,1,0.19,True
-CUST-0073,paid_social,TX,2023-01-20,2024-06-21,7,511.99,73.14,8,517,Gifts,4,1,0.21,False
-CUST-0074,paid_social,CA,2023-03-28,2023-12-04,3,218.19,72.73,208,250,Home & Kitchen,8,1,0.16,True
-CUST-0075,paid_social,TX,2023-06-05,2024-01-31,3,270.03,90.01,150,239,Home & Kitchen,4,1,0.15,True
-CUST-0076,email,NY,2024-01-10,2024-04-24,2,151.39,75.69,66,104,Home & Kitchen,7,2,0.18,False
-CUST-0077,organic_search,FL,2024-01-07,2024-01-07,1,71.32,71.32,174,0,Apparel,2,1,0.14,True
-CUST-0078,organic_search,WA,2024-04-21,2024-04-21,1,79.56,79.56,69,0,Gifts,6,0,0.13,False
-CUST-0079,email,CA,2023-01-09,2023-01-09,1,106.23,106.23,537,0,Home & Kitchen,4,2,0.1,True
-CUST-0080,referral,TX,2023-02-08,2024-02-27,3,263.48,87.83,123,383,Home & Kitchen,3,1,0.13,True
-CUST-0081,direct,NY,2023-02-12,2023-09-13,3,287.75,95.92,290,212,Home & Kitchen,2,3,0.02,True
-CUST-0082,paid_social,WA,2023-04-24,2024-03-31,3,265.92,88.64,90,341,Apparel,5,0,0.16,True
-CUST-0083,paid_social,NY,2023-01-19,2024-04-09,4,277.37,69.34,81,445,Beauty & Wellness,4,0,0.17,False
-CUST-0084,email,WA,2023-10-07,2023-10-07,1,72.25,72.25,266,0,Fitness,4,2,0.19,True
-CUST-0085,paid_social,GA,2023-02-20,2024-06-11,5,406.74,81.35,18,477,Home & Kitchen,3,0,0.19,False
-CUST-0086,organic_search,WA,2023-01-30,2024-03-13,2,158.9,79.45,108,408,Apparel,3,3,0.16,True
-CUST-0087,paid_social,CA,2023-01-25,2024-06-18,2,132.21,66.11,11,510,Home & Kitchen,4,1,0.19,False
-CUST-0088,paid_social,TX,2023-06-05,2023-09-02,2,160.64,80.32,301,89,Apparel,4,3,0.08,True
-CUST-0089,paid_social,NY,2024-01-17,2024-01-17,1,66.8,66.8,164,0,Home & Kitchen,7,0,0.14,True
-CUST-0090,referral,CA,2023-06-22,2023-07-11,2,148.53,74.27,354,19,Apparel,5,1,0.16,True
-CUST-0091,organic_search,CO,2024-04-13,2024-04-13,1,66.78,66.78,77,0,Apparel,4,1,0.19,False
-CUST-0092,paid_social,OH,2023-01-17,2023-03-02,2,153.45,76.72,485,43,Home & Kitchen,3,1,0.14,True
-CUST-0093,direct,WA,2023-02-27,2024-05-21,4,338.48,84.62,39,448,Beauty & Wellness,2,2,0.2,False
-CUST-0094,paid_social,OH,2024-05-22,2024-05-22,1,100.73,100.73,38,0,Beauty & Wellness,5,3,0.09,False
-CUST-0095,referral,MA,2023-05-28,2023-11-30,2,191.66,95.83,212,185,Apparel,5,0,0.22,True
-CUST-0096,email,TX,2023-05-01,2023-05-01,1,63.6,63.6,425,0,Gifts,6,0,0.12,True
-CUST-0097,paid_social,TX,2023-07-20,2024-05-28,3,193.69,64.56,32,312,Fitness,2,2,0.16,False
-CUST-0098,paid_social,OH,2024-02-19,2024-02-19,1,103.77,103.77,131,0,Fitness,5,1,0.08,True
-CUST-0099,email,CO,2023-03-24,2024-01-31,2,149.28,74.64,150,313,Home & Kitchen,7,1,0.11,True
-CUST-0100,paid_social,OH,2024-05-06,2024-05-06,1,62.52,62.52,54,0,Gifts,3,0,0.09,False
-CUST-0101,email,IL,2023-03-12,2024-04-27,2,106.81,53.41,63,412,Beauty & Wellness,6,0,0.14,False
-CUST-0102,referral,GA,2024-02-16,2024-02-16,1,98.67,98.67,134,0,Apparel,2,1,0.13,True
-CUST-0103,paid_social,NY,2023-01-02,2024-01-09,4,331.18,82.8,172,372,Home & Kitchen,5,1,0.19,True
-CUST-0104,organic_search,FL,2023-05-19,2023-07-08,2,168.2,84.1,357,50,Home & Kitchen,5,1,0.14,True
-CUST-0105,email,GA,2023-06-13,2024-01-10,2,115.32,57.66,171,211,Home & Kitchen,5,0,0.22,True
-CUST-0106,paid_social,GA,2024-05-10,2024-05-10,1,90.21,90.21,50,0,Beauty & Wellness,5,3,0.05,False
-CUST-0107,paid_social,TX,2023-04-27,2024-03-05,2,155.61,77.81,116,313,Home & Kitchen,5,4,0.26,True
-CUST-0108,paid_social,GA,2023-12-08,2024-01-04,2,128.5,64.25,177,27,Beauty & Wellness,2,0,0.12,True
-CUST-0109,paid_social,OH,2023-04-09,2023-04-09,1,88.02,88.02,447,0,Apparel,5,0,0.23,True
-CUST-0110,paid_social,FL,2024-04-22,2024-04-22,1,76.31,76.31,68,0,Fitness,3,1,0.21,False
-CUST-0111,paid_social,CO,2023-08-11,2024-04-06,2,184.17,92.08,84,238,Gifts,6,1,0.11,False
-CUST-0112,paid_social,CA,2024-01-01,2024-06-07,3,262.05,87.35,22,158,Fitness,2,3,0.16,False
-CUST-0113,email,NY,2023-02-02,2023-10-26,3,257.19,85.73,247,265,Home & Kitchen,4,1,0.24,True
-CUST-0114,email,CA,2023-12-15,2024-05-18,2,183.24,91.62,42,154,Apparel,2,0,0.19,False
-CUST-0115,paid_social,CA,2023-03-16,2024-04-30,3,292.31,97.44,60,411,Fitness,3,1,0.19,False
-CUST-0116,email,NY,2023-05-02,2024-06-27,4,182.25,45.56,2,421,Apparel,0,0,0.81,False
-CUST-0117,email,NY,2023-12-15,2024-05-31,3,180.27,60.09,29,168,Beauty & Wellness,1,1,0.72,False
-CUST-0118,email,NY,2023-07-28,2024-03-28,4,184.76,46.19,93,243,Apparel,0,0,0.77,True
-CUST-0119,email,GA,2023-01-13,2024-05-10,7,466.41,66.63,50,483,Fitness,4,0,0.72,False
-CUST-0120,paid_social,IL,2023-02-04,2024-03-30,3,178.02,59.34,91,420,Fitness,3,0,0.81,True
-CUST-0121,paid_social,TX,2023-01-18,2024-06-12,9,448.52,49.84,17,511,Beauty & Wellness,3,1,0.75,False
-CUST-0122,email,NY,2023-02-07,2024-06-19,6,303.57,50.59,10,497,Apparel,3,1,0.66,False
-CUST-0123,organic_search,CA,2023-07-04,2023-09-13,2,120.19,60.09,290,70,Fitness,0,0,0.82,True
-CUST-0124,email,FL,2023-10-01,2023-10-01,1,51.13,51.13,272,0,Apparel,2,0,0.78,True
-CUST-0125,paid_social,IL,2023-03-09,2023-12-10,2,71.32,35.66,202,275,Gifts,0,2,0.79,True
-CUST-0126,paid_social,OH,2024-06-05,2024-06-05,1,59.77,59.77,24,0,Apparel,2,1,0.7,False
-CUST-0127,paid_social,NY,2023-04-16,2024-02-07,2,130.64,65.32,143,296,Home & Kitchen,1,0,0.81,True
-CUST-0128,paid_social,NY,2023-05-28,2024-03-11,5,337.84,67.57,110,288,Apparel,2,0,0.71,True
-CUST-0129,paid_social,CA,2023-04-14,2023-12-23,5,258.06,51.61,189,253,Fitness,3,2,0.81,True
-CUST-0130,paid_social,MA,2023-01-02,2024-06-15,3,200.02,66.67,14,530,Apparel,1,0,0.71,False
-CUST-0131,paid_social,OH,2023-04-30,2024-04-26,2,123.82,61.91,64,361,Beauty & Wellness,5,0,0.72,False
-CUST-0132,organic_search,OH,2023-03-09,2023-08-19,3,201.09,67.03,315,162,Fitness,2,1,0.78,True
-CUST-0133,paid_social,FL,2023-01-01,2023-11-05,4,247.08,61.77,237,307,Gifts,0,0,0.78,True
-CUST-0134,paid_social,CA,2023-04-14,2023-04-14,1,46.16,46.16,442,0,Fitness,0,1,0.74,True
-CUST-0135,paid_social,MA,2023-01-21,2024-06-23,5,257.57,51.51,6,519,Beauty & Wellness,1,2,0.7,False
-CUST-0136,paid_social,WA,2023-05-18,2024-05-24,4,259.49,64.87,36,371,Apparel,2,0,0.69,False
-CUST-0137,email,TX,2023-11-22,2024-01-17,3,145.14,48.38,164,56,Apparel,4,1,0.74,True
-CUST-0138,paid_social,WA,2023-06-30,2023-06-30,1,57.35,57.35,365,0,Apparel,3,0,0.72,True
-CUST-0139,direct,CO,2023-10-20,2024-05-20,3,185.09,61.7,40,213,Beauty & Wellness,6,0,0.73,False
-CUST-0140,paid_social,MA,2024-02-02,2024-02-02,1,57.35,57.35,148,0,Apparel,2,0,0.79,True
-CUST-0141,paid_social,CO,2023-01-20,2023-12-04,2,151.47,75.73,208,317,Apparel,3,1,0.82,True
-CUST-0142,paid_social,IL,2023-02-22,2023-10-11,2,135.25,67.62,262,231,Apparel,0,0,0.74,True
-CUST-0143,paid_social,TX,2023-11-07,2023-11-07,1,61.45,61.45,235,0,Beauty & Wellness,4,1,0.79,True
-CUST-0144,paid_social,OH,2023-05-21,2024-05-25,7,407.63,58.23,35,370,Apparel,3,1,0.77,False
-CUST-0145,paid_social,NY,2023-01-12,2024-06-15,8,471.25,58.91,14,519,Apparel,2,0,0.77,False
-CUST-0146,paid_social,TX,2023-07-20,2024-03-31,4,200.78,50.2,90,255,Beauty & Wellness,1,1,0.69,True
-CUST-0147,paid_social,FL,2023-01-28,2024-06-14,4,189.74,47.44,15,503,Beauty & Wellness,2,0,0.79,False
-CUST-0148,paid_social,WA,2023-08-02,2024-05-25,2,106.33,53.16,35,296,Home & Kitchen,4,3,0.69,False
-CUST-0149,paid_social,CA,2023-05-14,2023-05-14,1,56.95,56.95,412,0,Fitness,1,0,0.78,True
-CUST-0150,paid_social,CA,2023-07-15,2023-11-16,4,214.63,53.66,226,124,Apparel,1,0,0.77,True
-CUST-0151,email,TX,2023-04-28,2024-05-20,3,201.49,67.16,40,388,Gifts,2,1,0.67,False
-CUST-0152,paid_social,MA,2024-02-06,2024-05-30,4,243.83,60.96,30,113,Beauty & Wellness,2,1,0.84,False
-CUST-0153,paid_social,IL,2023-09-18,2024-04-24,6,378.2,63.03,66,219,Fitness,0,0,0.73,False
-CUST-0154,paid_social,NY,2023-01-18,2024-05-02,7,399.83,57.12,58,469,Apparel,5,2,0.87,False
-CUST-0155,organic_search,MA,2023-03-11,2024-03-17,5,281.31,56.26,104,372,Apparel,4,2,0.81,True
-CUST-0156,paid_social,CO,2023-03-05,2024-02-16,5,247.76,49.55,134,347,Apparel,1,0,0.74,True
-CUST-0157,referral,CO,2023-03-08,2024-06-20,3,211.76,70.59,9,469,Fitness,1,0,0.71,False
-CUST-0158,paid_social,IL,2023-01-21,2023-04-08,2,157.0,78.5,448,77,Home & Kitchen,1,0,0.76,True
-CUST-0159,paid_social,CA,2024-04-12,2024-04-12,1,64.86,64.86,78,0,Apparel,1,1,0.71,False
-CUST-0160,paid_social,MA,2023-01-06,2023-08-17,4,211.05,52.76,317,223,Apparel,1,0,0.81,True
-CUST-0161,organic_search,NY,2023-02-02,2023-10-28,4,258.55,64.64,245,267,Beauty & Wellness,1,1,0.8,True
-CUST-0162,paid_social,IL,2023-06-11,2024-04-06,3,196.9,65.63,84,300,Beauty & Wellness,2,0,0.72,False
-CUST-0163,paid_social,MA,2023-03-24,2024-05-13,4,217.17,54.29,47,415,Gifts,1,1,0.68,False
-CUST-0164,paid_social,CA,2023-02-25,2024-03-21,3,202.63,67.54,100,389,Apparel,2,0,0.76,True
-CUST-0165,direct,IL,2023-04-23,2023-12-28,3,167.35,55.78,184,248,Fitness,1,0,0.82,True
-CUST-0166,organic_search,TX,2023-06-20,2024-05-10,4,231.68,57.92,50,324,Beauty & Wellness,3,0,0.74,False
-CUST-0167,referral,NY,2023-05-27,2024-06-28,9,422.97,47.0,1,397,Fitness,3,0,0.74,False
-CUST-0168,paid_social,NY,2023-03-26,2023-04-10,2,134.84,67.42,446,15,Gifts,1,0,0.8,True
-CUST-0169,paid_social,GA,2023-04-19,2024-02-02,4,262.69,65.67,148,288,Beauty & Wellness,0,1,0.81,True
-CUST-0170,paid_social,IL,2023-03-12,2023-12-14,4,260.38,65.09,198,277,Home & Kitchen,0,1,0.72,True
-CUST-0171,email,WA,2024-02-02,2024-02-02,1,125.23,125.23,148,0,Beauty & Wellness,3,0,0.13,True
-CUST-0172,paid_social,CA,2024-04-26,2024-04-26,1,109.06,109.06,64,0,Beauty & Wellness,1,1,0.06,False
-CUST-0173,email,FL,2024-03-30,2024-03-30,1,144.37,144.37,91,0,Apparel,2,1,0.08,True
-CUST-0174,organic_search,CA,2024-04-26,2024-04-26,1,143.16,143.16,64,0,Beauty & Wellness,4,2,0.05,False
-CUST-0175,referral,TX,2024-04-17,2024-04-17,1,140.55,140.55,74,0,Apparel,4,0,0.1,False
-CUST-0176,organic_search,MA,2024-02-03,2024-03-26,6,865.02,144.17,95,52,Home & Kitchen,1,1,0.01,True
-CUST-0177,paid_social,TX,2024-02-05,2024-03-30,2,259.47,129.74,91,54,Gifts,4,2,0.02,True
-CUST-0178,organic_search,FL,2024-03-10,2024-04-26,4,641.66,160.41,64,46,Gifts,3,0,0.11,False
-CUST-0179,paid_social,OH,2024-02-08,2024-02-08,1,142.19,142.19,142,0,Home & Kitchen,3,2,0.08,True
-CUST-0180,paid_social,IL,2024-02-13,2024-04-10,5,850.81,170.16,80,56,Home & Kitchen,1,1,-0.01,False
-CUST-0181,paid_social,NY,2024-02-25,2024-04-18,3,399.45,133.15,72,52,Apparel,4,2,-0.01,False
-CUST-0182,paid_social,IL,2024-04-17,2024-04-29,2,240.34,120.17,61,12,Fitness,2,2,-0.03,False
-CUST-0183,email,OH,2024-03-06,2024-03-06,1,181.97,181.97,115,0,Gifts,3,1,0.04,True
-CUST-0184,referral,OH,2024-02-14,2024-02-25,2,235.01,117.5,125,11,Apparel,4,1,0.05,True
-CUST-0185,referral,FL,2024-04-16,2024-04-16,1,100.6,100.6,74,0,Apparel,2,0,0.06,False
-CUST-0186,email,IL,2024-02-16,2024-02-16,1,112.4,112.4,134,0,Apparel,5,0,0.03,True
-CUST-0187,paid_social,CA,2024-03-31,2024-04-03,2,309.32,154.66,87,3,Home & Kitchen,1,1,0.06,False
-CUST-0188,paid_social,OH,2024-02-07,2024-04-21,4,469.11,117.28,69,73,Home & Kitchen,3,0,0.04,False
-CUST-0189,organic_search,FL,2024-03-22,2024-04-15,2,316.7,158.35,75,23,Apparel,3,2,0.08,False
-CUST-0190,paid_social,WA,2024-02-17,2024-02-18,2,313.93,156.97,132,0,Home & Kitchen,4,0,-0.02,True
-CUST-0191,paid_social,NY,2023-07-14,2023-07-14,1,81.67,81.67,351,0,Gifts,0,0,0.19,True
-CUST-0192,referral,NY,2023-12-30,2023-12-30,1,91.45,91.45,182,0,Home & Kitchen,0,0,0.2,True
-CUST-0193,organic_search,CA,2023-09-27,2023-09-27,1,38.4,38.4,276,0,Home & Kitchen,1,0,0.2,True
-CUST-0194,paid_social,FL,2024-02-26,2024-02-26,1,57.91,57.91,124,0,Apparel,3,0,0.15,True
-CUST-0195,organic_search,TX,2024-03-16,2024-03-16,1,40.05,40.05,105,0,Home & Kitchen,1,0,0.16,True
-CUST-0196,organic_search,NY,2023-02-23,2023-02-23,1,71.0,71.0,492,0,Fitness,1,0,0.27,True
-CUST-0197,organic_search,OH,2023-09-30,2023-09-30,1,47.12,47.12,273,0,Home & Kitchen,1,0,0.16,True
-CUST-0198,paid_social,GA,2023-02-08,2023-02-08,1,84.32,84.32,507,0,Apparel,4,0,0.16,True
-CUST-0199,organic_search,NY,2023-03-20,2023-03-20,1,56.82,56.82,467,0,Fitness,0,0,0.24,True
-CUST-0200,paid_social,NY,2024-02-26,2024-02-26,1,93.65,93.65,124,0,Fitness,1,1,0.18,True
-CUST-0201,email,TX,2023-12-28,2023-12-28,1,85.3,85.3,184,0,Home & Kitchen,1,1,0.21,True
-CUST-0202,organic_search,CA,2024-01-01,2024-01-01,1,68.98,68.98,180,0,Home & Kitchen,0,0,0.19,True
-CUST-0203,direct,NY,2023-04-07,2023-04-07,1,66.01,66.01,449,0,Beauty & Wellness,1,0,0.24,True
-CUST-0204,paid_social,TX,2023-01-09,2023-01-09,1,57.11,57.11,537,0,Apparel,1,0,0.19,True
-CUST-0205,email,CA,2024-01-30,2024-01-30,1,71.79,71.79,151,0,Home & Kitchen,0,0,0.17,True
-CUST-0206,paid_social,IL,2024-05-16,2024-05-16,1,59.09,59.09,44,0,Home & Kitchen,0,0,0.15,False
-CUST-0207,organic_search,CA,2023-02-18,2023-02-18,1,72.67,72.67,497,0,Gifts,3,1,0.13,True
-CUST-0208,paid_social,IL,2023-08-09,2023-08-09,1,61.79,61.79,325,0,Fitness,3,0,0.21,True
-CUST-0209,paid_social,CA,2023-10-31,2023-10-31,1,74.36,74.36,242,0,Apparel,0,0,0.12,True
-CUST-0210,email,NY,2023-06-05,2023-06-05,1,52.43,52.43,390,0,Home & Kitchen,2,0,0.25,True
-CUST-0211,paid_social,FL,2023-05-16,2023-05-16,1,94.25,94.25,410,0,Beauty & Wellness,1,0,0.12,True
-CUST-0212,direct,TX,2023-07-17,2023-07-17,1,68.47,68.47,348,0,Apparel,0,0,0.25,True
-CUST-0213,email,TX,2023-06-05,2023-06-05,1,80.58,80.58,390,0,Beauty & Wellness,3,0,0.23,True
-CUST-0214,paid_social,WA,2024-02-17,2024-02-17,1,54.17,54.17,133,0,Beauty & Wellness,1,0,0.27,True
-CUST-0215,paid_social,IL,2023-01-26,2023-01-26,1,73.86,73.86,520,0,Apparel,1,0,0.28,True
-CUST-0216,paid_social,FL,2023-04-01,2023-04-01,1,73.4,73.4,455,0,Home & Kitchen,0,0,0.25,True
-CUST-0217,email,MA,2023-03-31,2023-03-31,1,70.67,70.67,456,0,Home & Kitchen,0,1,0.25,True
-CUST-0218,paid_social,GA,2023-10-29,2023-10-29,1,71.78,71.78,244,0,Apparel,1,1,0.24,True
-CUST-0219,organic_search,NY,2023-01-23,2023-01-23,1,63.79,63.79,523,0,Home & Kitchen,1,0,0.15,True
-CUST-0220,organic_search,CA,2024-05-19,2024-05-19,1,45.05,45.05,41,0,Gifts,1,0,0.22,False
+customer_id,customer_email,acquisition_source,customer_state,first_order_date,last_order_date,total_orders,total_revenue,avg_order_value,days_since_last_order,days_as_customer,days_since_signup,top_category,email_opens_30d,email_clicks_30d,discount_rate,is_churned
+CUST-0001,h.taylor.den@yahoo.com,organic_search,MA,2023-01-23,2024-05-25,7,782.3,111.76,36,487,8,Apparel,6,1,0.08,False
+CUST-0002,r.jackson@icloud.com,paid_social,MA,2023-01-04,2024-05-25,8,842.14,105.27,36,506,13,Apparel,9,3,0.12,False
+CUST-0003,o.williams.den@outlook.com,organic_search,TX,2023-01-07,2024-06-01,8,819.56,102.44,29,510,5,Gifts,6,2,0.08,False
+CUST-0004,h.moore.pdx52@gmail.com,direct,TX,2023-10-29,2024-04-30,8,865.39,108.17,60,184,11,Beauty & Wellness,9,2,0.0,False
+CUST-0005,j.wright.atl@gmail.com,referral,TX,2023-01-15,2024-05-25,11,1272.11,115.65,35,495,6,Beauty & Wellness,9,1,0.07,False
+CUST-0006,k.nguyen.chi@yahoo.com,direct,IL,2023-01-08,2024-05-19,10,1179.21,117.92,42,496,7,Beauty & Wellness,3,1,0.05,False
+CUST-0007,o.green.bos45@gmail.com,referral,NY,2023-01-04,2024-06-07,16,1780.85,111.3,23,519,10,Apparel,5,2,0.0,False
+CUST-0008,s.young.chi37@yahoo.com,organic_search,TX,2023-10-18,2024-05-28,6,558.36,93.06,32,223,7,Apparel,7,4,0.11,False
+CUST-0009,a.robinson.den@gmail.com,referral,FL,2023-05-14,2024-06-20,5,601.23,120.25,10,402,10,Beauty & Wellness,6,2,-0.01,False
+CUST-0010,n.martin.bos84@outlook.com,organic_search,MA,2023-09-10,2024-06-02,4,343.88,85.97,28,265,7,Fitness,8,1,0.03,False
+CUST-0011,c.white.atl@gmail.com,email,FL,2023-02-13,2024-06-13,5,556.34,111.27,17,485,5,Home & Kitchen,9,1,-0.01,False
+CUST-0012,s.wright.sea@outlook.com,email,GA,2023-03-13,2024-06-24,4,408.9,102.22,6,468,8,Apparel,4,2,0.02,False
+CUST-0013,r.taylor.la15@outlook.com,email,WA,2023-02-15,2024-06-08,10,1160.48,116.05,21,479,6,Home & Kitchen,5,2,0.04,False
+CUST-0014,e.harris.sea@icloud.com,email,WA,2023-01-12,2024-05-28,5,582.62,116.52,32,502,4,Beauty & Wellness,8,1,0.14,False
+CUST-0015,m.robinson.pdx@icloud.com,email,IL,2023-02-20,2024-06-16,4,341.84,85.46,14,481,10,Beauty & Wellness,7,0,0.07,False
+CUST-0016,j.martinez.pdx@gmail.com,email,TX,2023-04-10,2024-06-07,9,1041.06,115.67,23,423,8,Beauty & Wellness,11,2,0.06,False
+CUST-0017,r.taylor.atl95@icloud.com,direct,CA,2023-04-22,2024-06-23,7,668.6,95.51,7,427,7,Apparel,9,4,0.1,False
+CUST-0018,j.walker.chi25@gmail.com,email,WA,2023-02-04,2024-06-29,12,1285.14,107.1,1,510,10,Beauty & Wellness,8,1,0.09,False
+CUST-0019,j.nelson.chi@gmail.com,direct,TX,2023-01-10,2024-05-28,8,888.63,111.08,33,503,5,Home & Kitchen,10,0,0.07,False
+CUST-0020,r.wright.nyc21@email.com,organic_search,FL,2023-01-03,2024-06-12,7,843.63,120.52,18,525,12,Beauty & Wellness,8,1,0.09,False
+CUST-0021,t.lee.chi@email.com,email,MA,2023-01-13,2024-05-23,9,835.62,92.85,38,495,11,Apparel,4,5,0.05,False
+CUST-0022,n.wright.chi@yahoo.com,paid_social,TX,2023-01-02,2024-06-03,10,1050.33,105.03,26,517,8,Fitness,13,2,0.12,False
+CUST-0023,a.thompson.bos54@yahoo.com,organic_search,CA,2023-09-24,2024-06-07,9,931.95,103.55,23,256,8,Apparel,7,1,-0.05,False
+CUST-0024,r.wright.sea66@icloud.com,referral,CA,2023-01-13,2024-05-26,7,877.34,125.33,35,498,12,Fitness,13,2,0.02,False
+CUST-0025,h.hill.den@gmail.com,referral,CA,2023-08-17,2024-06-13,7,790.62,112.95,17,300,10,Home & Kitchen,7,2,0.09,False
+CUST-0026,a.hernandez91@gmail.com,email,WA,2023-02-09,2024-02-24,8,880.9,110.11,126,380,5,Home & Kitchen,8,0,0.12,True
+CUST-0027,a.hall61@icloud.com,organic_search,CA,2023-03-28,2024-05-18,7,741.7,105.96,43,416,8,Home & Kitchen,8,3,0.14,False
+CUST-0028,k.young.bos84@yahoo.com,organic_search,TX,2023-03-10,2024-06-22,7,532.08,76.01,8,469,6,Beauty & Wellness,10,1,-0.01,False
+CUST-0029,p.young.sea24@outlook.com,organic_search,NY,2023-02-01,2024-06-21,10,1198.07,119.81,9,505,13,Apparel,7,3,0.19,False
+CUST-0030,k.adams.chi86@outlook.com,organic_search,FL,2023-06-14,2024-06-03,6,699.82,116.64,27,354,10,Apparel,8,1,0.01,False
+CUST-0031,k.lee.pdx42@email.com,direct,CA,2023-01-29,2024-03-11,4,311.08,77.77,110,406,5,Home & Kitchen,11,5,0.13,True
+CUST-0032,w.rodriguez.den22@gmail.com,direct,TX,2023-04-30,2024-06-09,10,1106.18,110.62,20,406,8,Fitness,7,2,0.06,False
+CUST-0033,r.garcia.nyc65@outlook.com,direct,CA,2023-03-27,2024-06-18,4,348.95,87.24,12,448,8,Home & Kitchen,4,4,0.04,False
+CUST-0034,p.nelson.la@gmail.com,email,FL,2023-04-20,2024-06-30,8,666.84,83.36,0,436,4,Home & Kitchen,5,1,0.13,False
+CUST-0035,p.walker.atl@email.com,referral,MA,2023-03-03,2023-07-17,2,182.31,91.16,348,136,9,Beauty & Wellness,3,2,0.06,True
+CUST-0036,p.perez.la@email.com,referral,OH,2023-03-08,2024-05-20,3,316.73,105.58,41,438,5,Beauty & Wellness,7,3,0.07,False
+CUST-0037,l.jackson.nyc@email.com,organic_search,WA,2023-07-15,2024-05-29,3,319.4,106.47,32,318,12,Gifts,2,1,0.06,False
+CUST-0038,g.moore.nyc21@gmail.com,email,CA,2023-02-23,2024-05-24,4,298.85,74.71,37,455,11,Beauty & Wellness,9,3,0.17,False
+CUST-0039,g.baker.la86@icloud.com,paid_social,TX,2023-08-17,2023-08-17,1,88.36,88.36,317,0,8,Beauty & Wellness,7,2,0.17,True
+CUST-0040,r.wright.la63@icloud.com,organic_search,NY,2024-01-19,2024-05-19,3,293.55,97.85,42,120,10,Fitness,4,1,0.15,False
+CUST-0041,b.wright34@outlook.com,direct,CO,2023-02-27,2024-06-22,8,753.39,94.17,8,480,8,Home & Kitchen,6,0,0.03,False
+CUST-0042,r.kim@yahoo.com,email,NY,2023-08-14,2024-05-21,4,362.59,90.65,40,280,3,Home & Kitchen,7,1,0.03,False
+CUST-0043,n.chen.nyc@outlook.com,organic_search,FL,2023-09-20,2024-06-25,3,250.61,83.54,5,278,9,Beauty & Wellness,5,1,0.18,False
+CUST-0044,d.johnson.sea@gmail.com,email,CO,2023-08-04,2024-06-22,3,212.86,70.95,8,322,7,Fitness,2,4,0.11,False
+CUST-0045,p.robinson.pdx@yahoo.com,direct,MA,2023-06-09,2024-06-14,4,297.69,74.42,16,370,4,Apparel,4,3,0.09,False
+CUST-0046,b.nelson.sea11@gmail.com,paid_social,NY,2023-01-29,2024-05-25,2,178.63,89.31,36,481,4,Fitness,7,2,0.09,False
+CUST-0047,g.moore.pdx94@outlook.com,email,WA,2023-06-20,2024-06-18,3,328.11,109.37,12,364,6,Fitness,4,1,0.16,False
+CUST-0048,k.wright.atl77@gmail.com,email,CA,2023-06-14,2024-05-20,5,484.71,96.94,41,340,15,Home & Kitchen,2,2,0.06,False
+CUST-0049,w.martinez.nyc@yahoo.com,email,FL,2024-05-22,2024-05-22,1,102.95,102.95,39,0,14,Home & Kitchen,6,2,0.1,False
+CUST-0050,f.chen.pdx81@gmail.com,referral,MA,2023-03-17,2024-06-12,2,162.41,81.2,18,452,8,Home & Kitchen,8,3,0.06,False
+CUST-0051,j.rodriguez.pdx@outlook.com,organic_search,CA,2023-10-26,2024-04-23,2,192.99,96.5,67,180,8,Beauty & Wellness,5,3,0.19,False
+CUST-0052,c.green.bos@icloud.com,email,WA,2023-06-19,2024-06-20,5,406.88,81.38,10,366,10,Apparel,4,0,0.07,False
+CUST-0053,w.johnson.atl74@outlook.com,organic_search,NY,2023-08-13,2024-06-04,2,171.84,85.92,26,295,6,Apparel,6,2,0.17,False
+CUST-0054,f.hill89@icloud.com,organic_search,CA,2023-02-22,2024-05-21,4,392.23,98.06,40,453,9,Apparel,7,4,0.13,False
+CUST-0055,n.walker.bos@yahoo.com,email,CA,2023-02-13,2024-05-30,2,167.24,83.62,31,471,8,Beauty & Wellness,1,3,0.11,False
+CUST-0056,n.wright.chi@icloud.com,direct,CA,2023-03-15,2024-05-21,6,453.39,75.56,40,432,8,Home & Kitchen,7,2,0.23,False
+CUST-0057,r.green88@gmail.com,organic_search,TX,2023-03-22,2024-06-04,5,445.28,89.06,26,439,15,Gifts,6,1,0.1,False
+CUST-0058,s.anderson.bos42@outlook.com,organic_search,CA,2023-05-24,2024-06-21,7,678.5,96.93,9,393,6,Fitness,8,2,0.09,False
+CUST-0059,b.hill.nyc@yahoo.com,email,CA,2023-01-09,2024-02-09,6,639.46,106.58,141,396,9,Apparel,3,0,0.06,True
+CUST-0060,e.taylor.den@email.com,direct,NY,2023-06-03,2024-06-02,3,227.46,75.82,28,364,5,Home & Kitchen,0,1,0.06,False
+CUST-0061,s.kim.den51@yahoo.com,email,TX,2023-01-03,2024-05-31,5,480.98,96.2,30,513,4,Apparel,3,2,0.07,False
+CUST-0062,d.clark.pdx@email.com,organic_search,CA,2023-12-23,2024-06-23,4,406.23,101.56,6,182,16,Home & Kitchen,3,1,0.08,False
+CUST-0063,r.williams.la33@gmail.com,organic_search,WA,2023-04-30,2024-06-29,4,350.76,87.69,1,425,6,Fitness,4,3,0.08,False
+CUST-0064,w.adams.atl@yahoo.com,email,MA,2023-07-13,2024-04-26,3,340.16,113.39,64,288,5,Apparel,7,5,0.12,False
+CUST-0065,h.harris.sea75@outlook.com,direct,NY,2023-05-07,2024-06-26,3,240.32,80.11,4,415,11,Apparel,9,3,0.11,False
+CUST-0066,b.white.den@gmail.com,referral,FL,2023-02-01,2024-05-21,2,160.02,80.01,40,474,10,Beauty & Wellness,7,1,0.1,False
+CUST-0067,a.white.atl64@yahoo.com,organic_search,TX,2023-11-21,2024-06-18,2,187.24,93.62,12,209,5,Beauty & Wellness,6,1,0.15,False
+CUST-0068,a.green.pdx10@outlook.com,organic_search,WA,2023-02-26,2024-06-22,4,417.98,104.5,8,481,7,Apparel,6,3,0.08,False
+CUST-0069,j.martinez.bos@yahoo.com,organic_search,NY,2024-06-20,2024-06-20,1,74.89,74.89,10,0,17,Apparel,13,0,0.12,False
+CUST-0070,j.moore.nyc93@yahoo.com,email,OH,2023-03-28,2024-06-12,4,313.93,78.48,18,441,9,Fitness,11,3,0.14,False
+CUST-0071,k.lewis.la74@icloud.com,paid_social,CA,2023-02-17,2024-05-18,5,469.03,93.81,43,455,2,Beauty & Wellness,4,2,0.09,False
+CUST-0072,w.hill.bos35@yahoo.com,email,CA,2023-03-17,2024-05-25,3,260.78,86.93,36,434,6,Home & Kitchen,3,0,0.06,False
+CUST-0073,s.young.nyc87@email.com,organic_search,IL,2023-04-07,2024-06-17,5,498.71,99.74,13,436,10,Apparel,6,2,0.09,False
+CUST-0074,f.moore.pdx19@icloud.com,organic_search,WA,2023-01-02,2024-06-12,2,163.89,81.94,18,526,8,Apparel,4,1,0.13,False
+CUST-0075,r.scott.atl@yahoo.com,email,NY,2023-04-25,2024-06-18,6,614.72,102.45,12,419,7,Home & Kitchen,4,1,0.1,False
+CUST-0076,c.martinez.den81@yahoo.com,referral,NY,2023-03-31,2024-06-17,2,153.59,76.8,13,443,10,Beauty & Wellness,2,0,0.19,False
+CUST-0077,f.allen.pdx36@email.com,organic_search,NY,2023-01-22,2024-05-24,11,935.15,85.01,37,487,5,Home & Kitchen,7,1,0.13,False
+CUST-0078,w.adams.bos11@gmail.com,email,CA,2023-01-26,2024-06-30,5,403.67,80.73,0,520,10,Home & Kitchen,7,3,0.12,False
+CUST-0079,f.hill.atl82@outlook.com,organic_search,NY,2023-09-20,2024-06-19,4,430.13,107.53,11,272,12,Beauty & Wellness,7,1,0.09,False
+CUST-0080,c.moore.chi@outlook.com,paid_social,TX,2023-02-27,2024-05-29,6,526.06,87.68,32,456,9,Home & Kitchen,12,1,0.06,False
+CUST-0081,p.jackson@outlook.com,organic_search,NY,2024-01-02,2024-06-26,4,290.16,72.54,4,175,6,Apparel,9,3,0.05,False
+CUST-0082,n.hall.chi12@yahoo.com,paid_social,OH,2023-10-05,2024-06-12,4,297.27,74.32,18,250,5,Apparel,12,2,0.07,False
+CUST-0083,j.harris.bos64@gmail.com,email,FL,2023-01-04,2024-05-22,6,594.89,99.15,39,503,6,Beauty & Wellness,3,0,0.06,False
+CUST-0084,w.white.la55@gmail.com,paid_social,GA,2023-07-02,2024-06-06,2,169.58,84.79,23,340,72,Fitness,4,3,0.14,False
+CUST-0085,f.martinez26@yahoo.com,paid_social,CO,2023-04-25,2023-04-25,1,46.29,46.29,431,0,74,Fitness,4,1,0.15,True
+CUST-0086,w.thompson.den93@yahoo.com,direct,GA,2023-06-28,2023-06-28,1,94.92,94.92,367,0,72,Home & Kitchen,3,2,0.14,True
+CUST-0087,p.adams46@icloud.com,organic_search,NY,2023-01-04,2023-10-20,3,328.44,109.48,253,288,64,Home & Kitchen,1,3,0.18,True
+CUST-0088,a.nelson.nyc93@gmail.com,referral,MA,2023-09-16,2024-01-28,2,179.53,89.77,153,133,87,Apparel,8,1,0.22,True
+CUST-0089,b.baker.den@gmail.com,organic_search,NY,2023-02-03,2023-02-03,1,92.3,92.3,512,0,53,Beauty & Wellness,4,1,0.17,True
+CUST-0090,e.hall.pdx20@gmail.com,organic_search,FL,2023-06-12,2023-06-12,1,82.12,82.12,383,0,68,Gifts,5,0,0.11,True
+CUST-0091,w.rodriguez.la15@gmail.com,direct,NY,2023-03-01,2023-03-01,1,79.44,79.44,486,0,68,Beauty & Wellness,6,0,0.14,True
+CUST-0092,b.nguyen.pdx14@gmail.com,direct,NY,2023-07-30,2024-06-26,2,138.86,69.43,3,331,77,Fitness,6,3,0.17,False
+CUST-0093,r.scott.atl14@email.com,email,CA,2023-01-12,2024-05-14,2,154.87,77.44,46,488,77,Apparel,2,1,0.13,False
+CUST-0094,e.baker.den91@email.com,paid_social,NY,2023-04-28,2024-05-29,2,159.18,79.59,31,397,79,Fitness,4,2,0.11,False
+CUST-0095,f.white.nyc14@gmail.com,organic_search,IL,2023-06-21,2023-06-21,1,61.4,61.4,374,0,52,Apparel,5,0,0.22,True
+CUST-0096,p.adams.la55@gmail.com,paid_social,CA,2023-07-06,2023-07-06,1,68.87,68.87,359,0,69,Fitness,2,1,0.18,True
+CUST-0097,e.lewis.nyc45@outlook.com,referral,FL,2023-04-16,2024-02-05,3,255.38,85.13,145,295,66,Fitness,6,1,0.22,True
+CUST-0098,m.hill.pdx@icloud.com,email,OH,2023-04-25,2024-05-30,5,455.89,91.18,30,400,65,Home & Kitchen,6,2,0.16,False
+CUST-0099,w.rodriguez.pdx69@yahoo.com,referral,CA,2024-04-12,2024-06-14,2,208.7,104.35,15,62,70,Home & Kitchen,4,0,0.21,False
+CUST-0100,l.taylor.chi97@email.com,referral,OH,2024-01-15,2024-06-17,2,180.08,90.04,12,153,86,Beauty & Wellness,2,0,0.15,False
+CUST-0101,o.lewis.den@outlook.com,organic_search,NY,2023-01-12,2023-09-07,2,145.31,72.66,296,238,83,Fitness,5,1,0.12,True
+CUST-0102,k.johnson.bos@outlook.com,paid_social,CO,2023-03-21,2023-09-03,2,144.56,72.28,300,166,76,Home & Kitchen,3,0,0.19,True
+CUST-0103,m.hernandez@icloud.com,organic_search,FL,2024-03-12,2024-03-12,1,75.38,75.38,109,0,68,Home & Kitchen,1,0,0.08,True
+CUST-0104,j.baker84@yahoo.com,email,IL,2023-01-29,2024-04-28,5,436.26,87.25,62,455,63,Home & Kitchen,2,0,0.14,False
+CUST-0105,w.hernandez.chi62@outlook.com,organic_search,CA,2023-04-01,2024-06-01,5,343.23,68.65,28,427,70,Apparel,5,2,0.04,False
+CUST-0106,w.young.den43@email.com,paid_social,CA,2024-05-03,2024-05-03,1,90.1,90.1,57,0,61,Beauty & Wellness,4,0,0.14,False
+CUST-0107,m.williams.la72@outlook.com,paid_social,WA,2024-03-22,2024-05-17,2,154.84,77.42,43,56,71,Home & Kitchen,4,1,0.15,False
+CUST-0108,o.clark.sea@outlook.com,organic_search,OH,2023-07-27,2023-07-27,1,86.45,86.45,338,0,63,Home & Kitchen,4,1,0.14,True
+CUST-0109,e.hall.sea79@outlook.com,referral,CA,2023-10-19,2023-10-19,1,90.93,90.93,254,0,77,Fitness,3,0,0.17,True
+CUST-0110,p.martinez.nyc@outlook.com,organic_search,IL,2023-01-01,2023-09-17,3,307.28,102.43,286,258,85,Home & Kitchen,3,3,0.11,True
+CUST-0111,e.perez.chi92@icloud.com,paid_social,OH,2023-09-12,2024-06-17,2,132.36,66.18,12,279,76,Fitness,4,0,0.19,False
+CUST-0112,c.nelson.nyc60@email.com,referral,FL,2024-03-17,2024-04-22,2,140.63,70.31,68,36,88,Beauty & Wellness,1,2,0.2,False
+CUST-0113,l.kim.nyc@gmail.com,paid_social,OH,2024-01-31,2024-01-31,1,85.88,85.88,150,0,66,Home & Kitchen,3,1,0.19,True
+CUST-0114,s.wright.atl@icloud.com,paid_social,TX,2023-05-10,2024-02-23,5,402.74,80.55,127,289,65,Home & Kitchen,2,0,0.22,True
+CUST-0115,b.walker.la26@icloud.com,organic_search,WA,2023-12-11,2023-12-11,1,73.85,73.85,201,0,66,Beauty & Wellness,2,0,0.14,True
+CUST-0116,b.lewis.pdx30@email.com,email,FL,2023-02-02,2023-02-02,1,66.26,66.26,513,0,62,Home & Kitchen,5,3,0.14,True
+CUST-0117,f.nelson.nyc@icloud.com,paid_social,CA,2023-10-11,2023-10-11,1,88.73,88.73,262,0,71,Beauty & Wellness,5,1,0.29,True
+CUST-0118,d.baker.atl86@yahoo.com,direct,TX,2023-06-16,2023-07-28,2,188.87,94.44,337,41,74,Beauty & Wellness,11,1,0.17,True
+CUST-0119,t.chen.den46@gmail.com,organic_search,FL,2023-01-02,2023-07-28,4,345.01,86.25,337,207,70,Fitness,3,2,0.15,True
+CUST-0120,p.patel.nyc93@icloud.com,organic_search,OH,2023-05-11,2024-04-02,3,218.61,72.87,88,326,65,Fitness,1,2,0.15,False
+CUST-0121,c.taylor.bos29@gmail.com,organic_search,WA,2023-09-05,2023-09-05,1,64.15,64.15,298,0,74,Gifts,8,0,0.11,True
+CUST-0122,m.perez.atl87@gmail.com,organic_search,CA,2023-01-18,2023-05-13,2,144.78,72.39,413,114,57,Apparel,2,1,0.18,True
+CUST-0123,r.chen.la88@outlook.com,email,NY,2023-02-13,2023-07-09,3,204.48,68.16,356,146,81,Beauty & Wellness,5,1,0.15,True
+CUST-0124,l.nelson.nyc@icloud.com,organic_search,CA,2023-08-30,2024-04-16,3,204.52,68.17,74,230,71,Home & Kitchen,2,2,0.18,False
+CUST-0125,o.thompson.bos66@email.com,email,FL,2023-03-30,2023-10-13,2,170.44,85.22,260,197,56,Beauty & Wellness,5,0,0.13,True
+CUST-0126,c.green.pdx@email.com,email,MA,2023-01-26,2023-12-08,4,294.13,73.53,204,316,67,Beauty & Wellness,7,1,0.14,True
+CUST-0127,m.baker.pdx@outlook.com,paid_social,TX,2023-03-11,2024-03-31,3,266.94,88.98,90,385,82,Apparel,4,2,0.14,True
+CUST-0128,n.lee.nyc78@icloud.com,paid_social,OH,2023-12-25,2023-12-25,1,86.42,86.42,187,0,79,Home & Kitchen,7,2,0.12,True
+CUST-0129,n.anderson.nyc93@gmail.com,paid_social,WA,2023-02-28,2023-10-21,2,157.92,78.96,252,234,68,Home & Kitchen,2,3,0.14,True
+CUST-0130,e.nelson26@email.com,referral,GA,2023-07-08,2024-04-22,2,152.53,76.27,68,288,71,Beauty & Wellness,0,2,0.19,False
+CUST-0131,a.adams.den37@gmail.com,referral,MA,2023-06-14,2023-12-06,2,205.39,102.69,206,174,65,Fitness,4,1,0.13,True
+CUST-0132,o.adams.sea@gmail.com,organic_search,WA,2023-03-19,2023-03-19,1,67.38,67.38,468,0,69,Fitness,9,1,0.11,True
+CUST-0133,p.hernandez.sea96@email.com,paid_social,CA,2023-10-18,2023-10-18,1,106.92,106.92,255,0,61,Beauty & Wellness,2,1,0.18,True
+CUST-0134,n.thompson.atl88@gmail.com,paid_social,WA,2023-03-26,2023-03-26,1,57.84,57.84,461,0,81,Apparel,5,0,0.08,True
+CUST-0135,e.martinez.den81@yahoo.com,referral,WA,2023-01-15,2024-02-17,4,350.08,87.52,133,397,67,Home & Kitchen,6,0,0.2,True
+CUST-0136,m.moore34@yahoo.com,direct,FL,2023-11-08,2023-11-08,1,90.95,90.95,235,0,62,Home & Kitchen,4,1,0.15,True
+CUST-0137,p.johnson.bos@gmail.com,paid_social,WA,2023-02-23,2024-01-03,2,158.86,79.43,178,313,50,Beauty & Wellness,5,1,0.25,True
+CUST-0138,r.adams.sea@email.com,paid_social,CA,2023-11-23,2024-02-27,2,123.32,61.66,123,95,81,Apparel,8,1,0.11,True
+CUST-0139,c.scott@icloud.com,paid_social,FL,2023-01-13,2023-11-14,4,362.27,90.57,228,305,68,Apparel,4,0,0.15,True
+CUST-0140,h.chen.nyc@yahoo.com,paid_social,WA,2023-10-20,2024-04-16,4,324.54,81.14,74,178,63,Home & Kitchen,6,2,0.12,False
+CUST-0141,b.taylor15@yahoo.com,paid_social,FL,2023-07-23,2024-03-19,2,180.5,90.25,102,240,74,Apparel,7,1,0.18,True
+CUST-0142,e.williams.la63@gmail.com,email,FL,2024-06-29,2024-06-29,1,81.83,81.83,0,0,72,Home & Kitchen,3,1,0.07,False
+CUST-0143,n.taylor.atl95@email.com,paid_social,CO,2023-06-05,2024-06-23,3,264.2,88.07,6,383,77,Apparel,4,0,0.25,False
+CUST-0144,e.white.atl@gmail.com,direct,MA,2024-05-23,2024-05-23,1,78.62,78.62,37,0,83,Fitness,5,2,0.17,False
+CUST-0145,r.white.sea@outlook.com,organic_search,MA,2023-05-01,2023-05-01,1,70.6,70.6,425,0,75,Home & Kitchen,4,1,0.14,True
+CUST-0146,h.patel.nyc13@icloud.com,organic_search,IL,2023-01-12,2024-02-06,4,292.5,73.12,144,389,73,Beauty & Wellness,3,0,0.15,True
+CUST-0147,p.anderson.nyc@yahoo.com,paid_social,TX,2023-03-27,2024-01-27,5,265.62,53.12,154,305,7,Fitness,3,1,0.68,True
+CUST-0148,f.thompson.nyc@icloud.com,direct,FL,2023-05-08,2024-01-20,4,281.84,70.46,161,256,13,Apparel,3,1,0.71,True
+CUST-0149,m.hernandez@gmail.com,paid_social,WA,2024-03-25,2024-03-25,1,52.85,52.85,96,0,8,Beauty & Wellness,2,0,0.69,True
+CUST-0150,t.green.atl97@outlook.com,referral,OH,2023-02-09,2024-01-14,5,307.96,61.59,167,339,8,Beauty & Wellness,2,2,0.83,True
+CUST-0151,h.chen.sea37@outlook.com,paid_social,WA,2023-03-20,2023-11-26,5,332.82,66.56,216,250,15,Fitness,2,2,0.84,True
+CUST-0152,r.garcia.den@outlook.com,paid_social,TX,2023-09-13,2024-01-09,3,215.3,71.77,172,118,6,Home & Kitchen,2,1,0.79,True
+CUST-0153,s.hall@gmail.com,paid_social,CA,2023-01-17,2024-04-22,3,164.72,54.91,68,461,9,Apparel,0,1,0.81,False
+CUST-0154,k.white@yahoo.com,paid_social,TX,2023-07-30,2023-11-18,4,261.79,65.45,224,110,20,Beauty & Wellness,0,0,0.68,True
+CUST-0155,j.lee.atl41@outlook.com,paid_social,CA,2023-10-17,2023-10-17,1,56.16,56.16,256,0,10,Apparel,2,0,0.8,True
+CUST-0156,j.perez.atl78@yahoo.com,paid_social,CA,2023-06-05,2024-04-21,6,321.7,53.62,69,321,9,Beauty & Wellness,3,2,0.76,False
+CUST-0157,f.thompson.nyc@email.com,paid_social,CA,2023-09-08,2023-09-08,1,64.37,64.37,295,0,5,Beauty & Wellness,1,0,0.86,True
+CUST-0158,t.nguyen@icloud.com,referral,FL,2023-07-27,2023-11-02,3,212.78,70.93,240,97,7,Apparel,1,2,0.78,True
+CUST-0159,f.baker.sea@yahoo.com,paid_social,CO,2023-01-31,2023-11-18,3,200.61,66.87,224,290,9,Apparel,1,0,0.75,True
+CUST-0160,r.lewis.la@outlook.com,paid_social,OH,2023-02-11,2023-02-11,1,79.14,79.14,504,0,4,Beauty & Wellness,3,0,0.78,True
+CUST-0161,t.anderson.den90@icloud.com,paid_social,MA,2023-02-16,2024-04-11,6,333.34,55.56,79,420,12,Apparel,4,0,0.77,False
+CUST-0162,k.chen.atl@yahoo.com,paid_social,CA,2023-03-23,2023-12-12,3,166.48,55.49,200,264,7,Apparel,3,0,0.73,True
+CUST-0163,g.jackson.atl72@icloud.com,paid_social,TX,2023-04-10,2023-11-09,4,236.85,59.21,233,212,6,Apparel,6,0,0.77,True
+CUST-0164,n.hall.den@icloud.com,referral,CA,2023-07-07,2024-01-08,3,224.78,74.93,173,185,9,Gifts,2,1,0.7,True
+CUST-0165,a.perez.sea@icloud.com,paid_social,TX,2023-02-20,2023-07-13,2,137.64,68.82,352,142,5,Apparel,3,0,0.73,True
+CUST-0166,b.white.den29@yahoo.com,paid_social,WA,2023-01-31,2024-03-26,7,453.99,64.86,95,420,11,Home & Kitchen,1,0,0.83,True
+CUST-0167,t.hernandez.den@outlook.com,paid_social,NY,2023-06-26,2024-02-08,4,245.37,61.34,142,226,14,Fitness,1,0,0.74,True
+CUST-0168,r.lewis.pdx27@email.com,paid_social,GA,2023-01-25,2024-03-13,3,144.6,48.2,108,412,11,Beauty & Wellness,0,0,0.72,True
+CUST-0169,g.lee.la47@email.com,paid_social,CA,2023-05-28,2024-01-28,3,192.09,64.03,153,244,11,Gifts,1,0,0.68,True
+CUST-0170,e.robinson.la@email.com,paid_social,CA,2024-01-08,2024-01-08,1,71.27,71.27,173,0,7,Beauty & Wellness,2,0,0.81,True
+CUST-0171,o.thompson.bos31@outlook.com,paid_social,IL,2023-06-22,2023-06-22,1,34.21,34.21,373,0,17,Beauty & Wellness,4,0,0.7,True
+CUST-0172,a.lee.nyc@outlook.com,paid_social,FL,2023-08-29,2024-04-09,3,172.08,57.36,81,224,5,Fitness,1,2,0.78,False
+CUST-0173,f.lewis.sea71@yahoo.com,paid_social,CA,2023-03-03,2023-09-22,2,107.61,53.8,281,202,10,Apparel,4,1,0.8,True
+CUST-0174,o.nelson.bos@email.com,organic_search,CA,2023-09-01,2023-09-01,1,61.73,61.73,302,0,8,Apparel,3,1,0.76,True
+CUST-0175,r.williams.chi29@outlook.com,paid_social,GA,2024-02-21,2024-02-21,1,78.37,78.37,129,0,8,Home & Kitchen,4,0,0.7,True
+CUST-0176,r.young.pdx@icloud.com,paid_social,CA,2023-06-16,2023-11-01,3,156.21,52.07,241,137,9,Beauty & Wellness,3,1,0.75,True
+CUST-0177,b.patel.sea66@email.com,paid_social,CO,2023-01-05,2023-01-05,1,28.62,28.62,541,0,7,Beauty & Wellness,1,1,0.81,True
+CUST-0178,f.patel.chi85@email.com,email,NY,2023-01-09,2023-11-21,5,324.39,64.88,221,316,5,Beauty & Wellness,1,1,0.74,True
+CUST-0179,p.johnson.chi@icloud.com,referral,OH,2023-08-16,2023-08-16,1,73.0,73.0,318,0,9,Apparel,2,0,0.79,True
+CUST-0180,d.baker.la@yahoo.com,paid_social,NY,2023-03-01,2023-07-18,2,104.86,52.43,347,138,11,Apparel,2,0,0.74,True
+CUST-0181,d.nelson.atl81@icloud.com,paid_social,FL,2023-03-15,2023-06-05,3,145.16,48.39,390,82,12,Fitness,3,0,0.69,True
+CUST-0182,f.white82@email.com,paid_social,WA,2023-12-07,2024-01-23,3,162.19,54.06,158,47,8,Apparel,2,1,0.79,True
+CUST-0183,e.scott.sea@gmail.com,organic_search,CA,2023-10-19,2023-11-19,2,131.4,65.7,223,30,11,Fitness,1,0,0.71,True
+CUST-0184,o.wright.chi14@yahoo.com,paid_social,GA,2023-06-16,2023-10-04,4,279.84,69.96,269,110,5,Apparel,1,0,0.69,True
+CUST-0185,m.hill.nyc@outlook.com,paid_social,GA,2023-06-16,2023-12-05,2,87.49,43.74,207,172,6,Beauty & Wellness,2,1,0.76,True
+CUST-0186,f.young.atl38@gmail.com,paid_social,FL,2023-07-13,2023-10-27,2,125.18,62.59,247,105,10,Apparel,0,1,0.81,True
+CUST-0187,p.moore.atl80@gmail.com,paid_social,TX,2024-01-09,2024-04-04,2,143.08,71.54,86,85,6,Fitness,1,0,0.65,False
+CUST-0188,a.patel.sea@gmail.com,paid_social,CA,2023-09-26,2023-09-26,1,49.84,49.84,277,0,4,Gifts,2,1,0.66,True
+CUST-0189,n.taylor.atl91@email.com,paid_social,FL,2024-02-07,2024-04-14,2,83.69,41.84,76,66,7,Fitness,2,0,0.81,False
+CUST-0190,t.anderson.bos73@yahoo.com,paid_social,TX,2023-11-17,2023-11-17,1,58.78,58.78,225,0,10,Beauty & Wellness,2,0,0.73,True
+CUST-0191,w.anderson.den@email.com,paid_social,TX,2023-11-11,2023-11-11,1,60.26,60.26,231,0,10,Home & Kitchen,2,0,0.7,True
+CUST-0192,k.perez.bos@email.com,paid_social,WA,2023-05-31,2023-05-31,1,46.74,46.74,395,0,4,Beauty & Wellness,0,0,0.8,True
+CUST-0193,w.green.sea66@email.com,paid_social,TX,2024-01-13,2024-01-13,1,65.35,65.35,168,0,12,Fitness,4,0,0.74,True
+CUST-0194,m.taylor.atl75@icloud.com,paid_social,OH,2023-01-31,2023-08-07,3,130.47,43.49,328,187,8,Apparel,4,2,0.73,True
+CUST-0195,p.chen.nyc@gmail.com,paid_social,IL,2023-03-04,2023-09-19,2,165.45,82.72,284,198,10,Fitness,1,1,0.77,True
+CUST-0196,t.moore.chi18@outlook.com,paid_social,CA,2023-12-10,2023-12-10,1,61.41,61.41,202,0,10,Apparel,3,0,0.8,True
+CUST-0197,e.johnson.bos@email.com,paid_social,MA,2023-03-05,2023-09-07,3,184.63,61.54,296,185,10,Beauty & Wellness,2,0,0.69,True
+CUST-0198,g.jackson.la@email.com,paid_social,MA,2024-02-01,2024-02-01,1,58.98,58.98,149,0,5,Beauty & Wellness,5,2,0.76,True
+CUST-0199,h.hernandez.atl@gmail.com,email,OH,2023-08-19,2024-02-21,6,389.3,64.88,129,185,5,Beauty & Wellness,5,0,0.77,True
+CUST-0200,a.taylor.bos@icloud.com,direct,IL,2023-02-24,2024-03-02,3,144.35,48.12,119,371,11,Fitness,1,0,0.77,True
+CUST-0201,d.hall.la95@yahoo.com,paid_social,TX,2023-07-10,2023-11-24,3,206.03,68.68,218,137,11,Beauty & Wellness,2,0,0.83,True
+CUST-0202,d.hill.sea@email.com,direct,WA,2023-01-09,2023-11-15,3,165.51,55.17,227,310,7,Fitness,3,0,0.76,True
+CUST-0203,o.martin.nyc79@email.com,paid_social,NY,2023-07-27,2023-07-27,1,76.53,76.53,338,0,8,Apparel,0,0,0.69,True
+CUST-0204,f.lee.bos@yahoo.com,paid_social,IL,2023-07-14,2024-01-09,2,137.42,68.71,172,178,2,Home & Kitchen,1,1,0.81,True
+CUST-0205,s.adams12@outlook.com,direct,GA,2023-01-27,2024-03-12,7,468.79,66.97,109,410,7,Fitness,2,1,0.75,True
+CUST-0206,l.young.atl34@email.com,paid_social,OH,2023-08-18,2023-08-18,1,52.06,52.06,316,0,8,Home & Kitchen,1,0,0.8,True
+CUST-0207,s.clark.chi49@gmail.com,paid_social,MA,2023-04-11,2023-12-28,4,195.3,48.83,184,260,11,Beauty & Wellness,0,0,0.77,True
+CUST-0208,n.moore.atl@outlook.com,email,TX,2023-11-27,2023-11-27,1,60.01,60.01,215,0,8,Apparel,5,2,0.7,True
+CUST-0209,j.green.chi@gmail.com,paid_social,GA,2023-03-09,2024-01-17,5,304.37,60.87,164,314,6,Apparel,4,2,0.75,True
+CUST-0210,g.hernandez.sea@yahoo.com,paid_social,FL,2023-02-12,2024-01-23,4,259.51,64.88,158,345,19,Apparel,0,0,0.77,True
+CUST-0211,f.moore.nyc53@yahoo.com,paid_social,GA,2023-06-13,2023-06-13,1,66.81,66.81,382,0,10,Apparel,3,1,0.74,True
+CUST-0212,m.lewis.atl50@yahoo.com,organic_search,FL,2023-04-13,2023-11-05,3,195.85,65.28,237,206,5,Fitness,2,1,0.76,True
+CUST-0213,r.taylor.sea@gmail.com,paid_social,GA,2023-01-24,2024-01-04,2,110.36,55.18,177,344,8,Fitness,0,0,0.7,True
+CUST-0214,a.baker.den48@gmail.com,paid_social,IL,2023-12-08,2023-12-08,1,55.6,55.6,204,0,10,Beauty & Wellness,1,0,0.81,True
+CUST-0215,p.baker.atl64@outlook.com,paid_social,MA,2023-08-15,2023-08-15,1,43.2,43.2,319,0,9,Beauty & Wellness,0,0,0.69,True
+CUST-0216,n.baker.la@yahoo.com,paid_social,NY,2023-01-03,2023-06-26,4,170.55,42.64,369,173,8,Apparel,3,0,0.75,True
+CUST-0217,w.martinez@outlook.com,paid_social,OH,2024-02-25,2024-03-22,2,227.36,113.68,99,25,28,Apparel,3,3,0.09,True
+CUST-0218,d.lee.atl@outlook.com,email,IL,2024-02-06,2024-02-06,1,94.85,94.85,144,0,17,Home & Kitchen,3,2,0.01,True
+CUST-0219,t.perez.bos54@outlook.com,email,FL,2024-03-15,2024-03-15,1,113.82,113.82,106,0,26,Beauty & Wellness,5,0,0.08,True
+CUST-0220,t.lewis.sea23@email.com,paid_social,FL,2024-04-10,2024-04-10,1,182.5,182.5,80,0,16,Fitness,1,1,0.06,False
+CUST-0221,d.kim.pdx70@gmail.com,paid_social,TX,2024-03-13,2024-04-21,2,227.74,113.87,69,39,21,Beauty & Wellness,0,1,0.11,False
+CUST-0222,t.baker.pdx30@email.com,direct,FL,2024-04-06,2024-04-19,3,387.18,129.06,71,12,22,Beauty & Wellness,0,3,0.07,False
+CUST-0223,n.young.chi85@icloud.com,organic_search,CA,2024-02-07,2024-04-27,5,623.15,124.63,63,79,21,Apparel,5,2,0.04,False
+CUST-0224,n.chen.den63@icloud.com,direct,CA,2024-03-21,2024-03-21,1,139.23,139.23,100,0,16,Apparel,3,2,0.08,True
+CUST-0225,o.walker@email.com,referral,NY,2024-04-17,2024-04-17,1,102.85,102.85,73,0,23,Apparel,3,0,0.06,False
+CUST-0226,n.taylor.chi@yahoo.com,paid_social,CO,2024-02-14,2024-04-18,5,796.48,159.3,72,63,20,Apparel,4,0,0.07,False
+CUST-0227,j.perez58@icloud.com,organic_search,CA,2024-02-12,2024-02-12,1,105.35,105.35,138,0,29,Apparel,3,3,0.1,True
+CUST-0228,a.clark.pdx83@icloud.com,direct,FL,2024-03-03,2024-04-03,2,175.79,87.89,87,31,18,Gifts,4,1,-0.02,False
+CUST-0229,m.young.chi@gmail.com,direct,CA,2024-04-13,2024-04-13,1,125.29,125.29,77,0,22,Fitness,5,1,0.04,False
+CUST-0230,g.baker.la@gmail.com,organic_search,GA,2024-02-03,2024-02-03,1,113.77,113.77,147,0,19,Home & Kitchen,5,2,0.04,True
+CUST-0231,k.johnson17@yahoo.com,paid_social,OH,2024-04-27,2024-04-27,1,125.75,125.75,63,0,23,Fitness,6,2,0.07,False
+CUST-0232,t.nelson@gmail.com,organic_search,NY,2024-02-11,2024-02-11,1,125.85,125.85,139,0,16,Home & Kitchen,3,3,0.16,True
+CUST-0233,s.johnson.nyc@icloud.com,paid_social,TX,2024-03-11,2024-03-11,1,138.8,138.8,110,0,28,Beauty & Wellness,3,1,0.0,True
+CUST-0234,g.martin20@outlook.com,paid_social,FL,2024-02-01,2024-04-16,3,362.79,120.93,74,74,16,Fitness,1,0,0.11,False
+CUST-0235,f.allen.sea71@icloud.com,organic_search,FL,2024-04-13,2024-04-29,2,350.01,175.0,61,16,21,Apparel,7,1,0.06,False
+CUST-0236,r.wright.sea@email.com,organic_search,NY,2024-04-23,2024-04-23,1,130.73,130.73,67,0,28,Beauty & Wellness,2,0,0.06,False
+CUST-0237,m.anderson.pdx92@outlook.com,email,FL,2024-04-18,2024-04-20,2,218.68,109.34,70,2,19,Apparel,2,3,0.02,False
+CUST-0238,w.kim.pdx79@yahoo.com,email,FL,2024-02-28,2024-04-21,4,559.05,139.76,69,53,19,Home & Kitchen,0,0,0.05,False
+CUST-0239,b.williams.den58@email.com,paid_social,FL,2024-02-02,2024-04-06,3,360.7,120.23,84,63,24,Apparel,3,2,-0.01,False
+CUST-0240,n.robinson.nyc70@gmail.com,direct,TX,2024-02-01,2024-02-01,1,247.07,247.07,149,0,19,Apparel,1,3,0.13,True
+CUST-0241,f.jackson.chi66@outlook.com,paid_social,CO,2024-04-22,2024-04-22,2,270.55,135.28,68,0,21,Apparel,3,1,0.11,False
+CUST-0242,b.martinez.chi82@email.com,paid_social,CO,2024-04-11,2024-04-26,2,181.05,90.53,64,15,26,Beauty & Wellness,4,0,0.05,False
+CUST-0243,h.moore.atl74@gmail.com,direct,NY,2024-01-29,2024-01-29,1,86.7,86.7,152,0,75,Gifts,3,1,0.31,True
+CUST-0244,w.nelson53@icloud.com,paid_social,CO,2023-09-10,2023-09-10,1,54.43,54.43,293,0,54,Gifts,0,0,0.16,True
+CUST-0245,c.moore.den@email.com,paid_social,NY,2023-12-20,2023-12-20,1,98.31,98.31,192,0,71,Gifts,0,1,0.32,True
+CUST-0246,a.white.atl18@yahoo.com,paid_social,FL,2023-05-07,2023-05-07,1,76.92,76.92,419,0,78,Beauty & Wellness,0,0,0.2,True
+CUST-0247,f.taylor.pdx@gmail.com,paid_social,GA,2024-02-12,2024-02-12,1,70.36,70.36,138,0,62,Gifts,0,0,0.15,True
+CUST-0248,e.taylor.chi91@yahoo.com,paid_social,CO,2024-01-07,2024-01-07,1,63.02,63.02,174,0,70,Gifts,1,0,0.17,True
+CUST-0249,d.white.chi@outlook.com,organic_search,CA,2023-02-23,2023-02-23,1,49.55,49.55,492,0,69,Gifts,1,0,0.27,True
+CUST-0250,b.patel.atl86@gmail.com,paid_social,NY,2024-03-27,2024-03-27,1,74.31,74.31,94,0,83,Gifts,0,0,0.23,True
+CUST-0251,f.hernandez.atl97@yahoo.com,paid_social,WA,2023-05-22,2023-05-22,1,44.82,44.82,404,0,70,Gifts,1,1,0.13,True
+CUST-0252,d.williams.pdx33@email.com,direct,FL,2023-01-06,2023-01-06,1,80.38,80.38,540,0,77,Gifts,1,0,0.15,True
+CUST-0253,s.taylor.pdx@yahoo.com,paid_social,NY,2023-07-04,2023-07-04,1,90.25,90.25,361,0,78,Gifts,0,0,0.19,True
+CUST-0254,e.garcia.atl74@yahoo.com,paid_social,WA,2023-02-03,2023-02-03,1,73.98,73.98,512,0,66,Apparel,0,0,0.15,True
+CUST-0255,j.rodriguez.bos66@icloud.com,paid_social,CA,2023-09-08,2023-09-08,1,77.8,77.8,295,0,57,Gifts,1,0,0.23,True
+CUST-0256,m.green.den@outlook.com,paid_social,FL,2023-06-21,2023-06-21,1,64.59,64.59,374,0,81,Gifts,1,0,0.21,True
+CUST-0257,k.moore.la38@gmail.com,referral,FL,2024-03-08,2024-03-08,1,68.98,68.98,114,0,68,Fitness,1,0,0.18,True
+CUST-0258,l.martin.atl@outlook.com,direct,OH,2023-03-02,2023-03-02,1,47.56,47.56,485,0,61,Beauty & Wellness,0,1,0.14,True
+CUST-0259,c.williams.sea@email.com,paid_social,OH,2024-02-03,2024-02-03,1,59.45,59.45,147,0,71,Gifts,1,2,0.21,True
+CUST-0260,b.white.nyc@gmail.com,paid_social,CA,2024-03-29,2024-03-29,1,52.65,52.65,92,0,57,Apparel,1,0,0.2,True
+CUST-0261,b.patel@gmail.com,email,MA,2023-08-10,2023-08-10,1,44.62,44.62,325,0,57,Gifts,0,0,0.26,True
+CUST-0262,m.kim.atl35@email.com,paid_social,OH,2023-10-22,2023-10-22,1,55.12,55.12,252,0,57,Gifts,1,0,0.21,True
+CUST-0263,s.walker.den@gmail.com,paid_social,FL,2024-03-16,2024-03-16,1,53.66,53.66,105,0,78,Gifts,2,0,0.19,True
+CUST-0264,g.perez.nyc@email.com,paid_social,CA,2023-02-26,2023-02-26,1,76.62,76.62,489,0,86,Gifts,3,0,0.19,True
+CUST-0265,g.jackson.nyc72@gmail.com,paid_social,CA,2024-03-09,2024-03-09,1,59.68,59.68,112,0,73,Gifts,2,0,0.25,True
+CUST-0266,f.hernandez.nyc88@gmail.com,paid_social,CA,2023-11-08,2023-11-08,1,73.1,73.1,234,0,68,Gifts,1,1,0.29,True
+CUST-0267,r.lewis.bos58@icloud.com,organic_search,TX,2023-08-26,2023-08-26,1,61.41,61.41,308,0,72,Apparel,0,2,0.18,True
+CUST-0268,b.white.nyc71@icloud.com,paid_social,TX,2023-10-29,2023-10-29,1,80.06,80.06,244,0,70,Gifts,3,0,0.16,True
+CUST-0269,o.hernandez.sea60@email.com,paid_social,CA,2023-12-26,2023-12-26,1,56.75,56.75,186,0,74,Beauty & Wellness,0,0,0.2,True
+CUST-0270,j.lee.atl31@gmail.com,organic_search,IL,2023-11-27,2023-11-27,1,49.31,49.31,215,0,64,Apparel,1,0,0.15,True
+CUST-0271,a.allen.pdx25@gmail.com,paid_social,CO,2023-11-02,2023-11-02,1,71.18,71.18,240,0,65,Home & Kitchen,1,0,0.24,True
+CUST-0272,r.clark.la96@outlook.com,paid_social,NY,2024-02-26,2024-02-26,1,59.31,59.31,124,0,65,Gifts,1,0,0.22,True
+CUST-0273,t.hall.chi@outlook.com,referral,FL,2023-12-09,2023-12-09,1,104.62,104.62,203,0,69,Gifts,1,0,0.2,True
+CUST-0274,g.rodriguez.pdx@outlook.com,paid_social,WA,2023-08-27,2023-08-27,1,84.17,84.17,307,0,83,Gifts,0,1,0.25,True
+CUST-0275,s.patel.den79@outlook.com,email,OH,2024-01-01,2024-01-01,1,73.71,73.71,180,0,77,Gifts,1,0,0.18,True
+CUST-0276,r.lewis.pdx@outlook.com,paid_social,GA,2023-05-13,2023-05-13,1,70.49,70.49,413,0,66,Apparel,1,0,0.2,True
+CUST-0277,d.patel.chi14@gmail.com,paid_social,TX,2023-02-01,2023-02-01,1,52.2,52.2,514,0,79,Beauty & Wellness,1,0,0.24,True
+CUST-0278,m.clark.sea@gmail.com,paid_social,OH,2023-09-17,2023-09-17,1,67.4,67.4,286,0,71,Gifts,1,0,0.12,True
+CUST-0279,a.white.bos@gmail.com,paid_social,OH,2023-05-18,2023-05-18,1,75.56,75.56,408,0,71,Gifts,2,0,0.17,True
+CUST-0280,d.williams.sea18@outlook.com,paid_social,WA,2023-05-14,2023-05-14,1,55.68,55.68,412,0,73,Gifts,1,0,0.26,True

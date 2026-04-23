@@ -6,6 +6,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
+from src.eda import (
+    _apply_base_layout,
+    KIN_ACCENT, KIN_ACCENT_SOFT, KIN_BG, KIN_RED, KIN_AMBER, KIN_BLUE, KIN_BLUE_SOFT,
+)
+
 
 FEATURES = [
     "total_orders",
@@ -49,51 +54,171 @@ def feature_importance_chart(model, feature_names: list) -> go.Figure:
         x=importances[idx],
         y=labels,
         orientation="h",
-        marker_color="#3B82F6",
+        marker=dict(
+            color=KIN_ACCENT_SOFT,
+            line=dict(color=KIN_ACCENT, width=1),
+        ),
+        hovertemplate="<b>%{y}</b><br>Importance: %{x:.3f}<extra></extra>",
     ))
     fig.update_layout(
-        title="Churn Model — Feature Importance",
-        xaxis_title="Importance",
-        height=360,
-        margin=dict(t=50, b=40, l=160, r=20),
-        plot_bgcolor="white",
-        paper_bgcolor="white",
+        title="Recency and Engagement Drive the Model. Discount Rate Ranks Close Behind",
+        xaxis_title="Relative Importance",
+        yaxis_title="",
+        showlegend=False,
     )
-    fig.update_xaxes(showgrid=True, gridcolor="#F3F4F6")
+    fig = _apply_base_layout(fig, height=380)
+    # Left margin for long feature labels
+    fig.update_layout(margin=dict(t=48, b=48, l=160, r=32))
     return fig
 
 
 def score_distribution_chart(scored: pd.DataFrame) -> go.Figure:
     fig = px.histogram(
         scored, x="churn_score", nbins=20,
-        title="Churn Score Distribution",
-        color_discrete_sequence=["#3B82F6"],
+        title="High-Risk Tail Is Small but Concentrated. That's Where the List Comes From",
+        color_discrete_sequence=[KIN_BLUE],
         labels={"churn_score": "Churn Risk Score (0–100)"},
     )
-    fig.add_vline(x=70, line_dash="dash", line_color="#DC2626",
-                  annotation_text="High Risk Threshold", annotation_position="top right")
-    fig.update_layout(
-        height=340,
-        margin=dict(t=50, b=40, l=50, r=20),
-        plot_bgcolor="white",
-        paper_bgcolor="white",
-        yaxis_title="Customers",
+    fig.update_traces(
+        marker=dict(color=KIN_BLUE_SOFT, line=dict(color=KIN_BLUE, width=1)),
+        hovertemplate="<b>Score %{x}</b><br>%{y} customers<extra></extra>",
     )
-    fig.update_xaxes(showgrid=True, gridcolor="#F3F4F6")
-    fig.update_yaxes(showgrid=True, gridcolor="#F3F4F6")
+    fig.add_vline(
+        x=70, line_dash="dot", line_color=KIN_RED, line_width=1.5,
+        annotation_text="High Risk Threshold",
+        annotation_position="top right",
+        annotation_font=dict(family="IBM Plex Mono, monospace", size=10, color=KIN_RED),
+    )
+    fig.update_layout(
+        yaxis_title="Customers",
+        xaxis_title="Churn Risk Score (0–100)",
+        showlegend=False,
+    )
+    fig = _apply_base_layout(fig, height=360)
     return fig
 
 
+def _recommended_action(row: pd.Series) -> str:
+    """
+    Generate a specific one-line recommended action for each customer.
+    Logic is driven by segment, recency, top_category, and discount_rate.
+    Output is imperative, specific, and includes the "why" in the fewest possible words.
+    """
+    segment = row.get("segment", "")
+    days = int(row.get("days_since_last_order", 0))
+    orders = int(row.get("total_orders", 1))
+    discount_rate = float(row.get("discount_rate", 0.0))
+    top_category = str(row.get("top_category", "")).strip()
+    avg_order_value = float(row.get("avg_order_value", 0.0))
+
+    high_discount = discount_rate >= 0.5   # 50%+ of orders used a discount
+    gifts_buyer = top_category.lower() == "gifts"
+    high_value = avg_order_value >= 80
+
+    if segment == "At Risk":
+        if high_discount:
+            return (
+                f"Lapsed At Risk customer ({days}d quiet) with high discount dependency — "
+                "send a personalized win-back referencing their last purchase; omit any discount offer "
+                "to avoid reinforcing price-driven behaviour"
+            )
+        elif gifts_buyer:
+            return (
+                f"At Risk buyer ({days}d quiet) whose purchases concentrated in Gifts — "
+                "send a 3-email cross-category sequence introducing Home & Kitchen or Beauty & Wellness; "
+                "no discount, the goal is category bridge not price incentive"
+            )
+        else:
+            return (
+                f"High-LTV At Risk customer, {days} days since last purchase, {orders} prior orders — "
+                "send a personalized win-back referencing purchase history; "
+                "no blanket discount; target reactivation within 21 days"
+            )
+
+    elif segment == "Price Hunters":
+        return (
+            f"Price Hunter: {int(discount_rate * 100)}% of orders used a discount, now {days}d lapsed — "
+            "do not offer further discounts; send educational content (how-to, product story) "
+            "to shift the relationship pattern before re-engagement"
+        )
+
+    elif segment == "Loyalists":
+        if days > 60:
+            return (
+                f"Loyalist with {orders} orders, unusually quiet for {days} days — "
+                "send a personal check-in (not a blast); reference their purchase history; "
+                "consider an early-access or new-arrival preview to re-engage without a discount"
+            )
+        else:
+            return (
+                f"Loyalist, {orders} orders, recently active — "
+                "invite into referral program; do not include in discount promotions"
+            )
+
+    elif segment == "Promising":
+        if gifts_buyer:
+            return (
+                f"Promising customer whose first purchase was in Gifts ({days}d ago) — "
+                "send a cross-category intro sequence to Home & Kitchen within 14 days of that order; "
+                "first repeat purchase is the critical conversion"
+            )
+        else:
+            return (
+                f"Promising buyer with {orders} order(s), {days}d since last purchase — "
+                "send a second-purchase sequence featuring highest-retention categories; "
+                "goal is first repeat purchase before the 90-day drop-off window"
+            )
+
+    elif segment == "Champions":
+        return (
+            f"Champion customer, {orders} orders, active — "
+            "invite into referral program; exclude from discount campaigns; "
+            "surface new arrivals or exclusive access as re-engagement lever"
+        )
+
+    else:
+        return (
+            f"Customer {days}d since last purchase, {orders} orders — "
+            "review manually; segment signal unclear"
+        )
+
+
 def intervention_list(scored: pd.DataFrame, n: int = 20) -> pd.DataFrame:
-    """Top N customers ranked by LTV x churn risk — highest intervention priority."""
+    """
+    Top N customers ranked by LTV x churn risk — highest intervention priority.
+    Each row includes a specific one-line Recommended Action derived from segment,
+    recency, category, and discount behaviour.
+    """
     df = scored.copy()
     df["priority_score"] = df["total_revenue"] * df["churn_probability"]
-    top = df.nlargest(n, "priority_score")[[
-        "customer_id", "total_revenue", "total_orders",
-        "avg_order_value", "days_since_last_order", "churn_score"
-    ]].reset_index(drop=True)
+    df["recommended_action"] = df.apply(_recommended_action, axis=1)
+
+    # Include customer_email if present (added in Phase 1 data refresh)
+    select_cols = ["customer_id"]
+    if "customer_email" in df.columns:
+        select_cols.append("customer_email")
+    select_cols += [
+        "segment",
+        "total_revenue", "total_orders", "avg_order_value",
+        "days_since_last_order", "churn_score",
+        "recommended_action",
+    ]
+
+    top = df.nlargest(n, "priority_score")[select_cols].reset_index(drop=True)
     top.index += 1
-    top.columns = ["Customer ID", "Lifetime Revenue", "Orders", "Avg Order Value", "Days Since Purchase", "Churn Score"]
+
+    rename_map = {
+        "customer_id":          "Customer ID",
+        "customer_email":       "Email",
+        "segment":              "Segment",
+        "total_revenue":        "Lifetime Revenue",
+        "total_orders":         "Orders",
+        "avg_order_value":      "Avg Order Value",
+        "days_since_last_order":"Days Since Purchase",
+        "churn_score":          "Churn Score",
+        "recommended_action":   "Recommended Action",
+    }
+    top = top.rename(columns=rename_map)
     top["Lifetime Revenue"] = top["Lifetime Revenue"].map("${:,.0f}".format)
     top["Avg Order Value"] = top["Avg Order Value"].map("${:,.0f}".format)
     return top

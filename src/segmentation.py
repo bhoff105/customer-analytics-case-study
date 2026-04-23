@@ -5,6 +5,8 @@ import plotly.graph_objects as go
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
+from src.eda import _apply_base_layout, KIN_BG, KIN_TEXT_DIM, KIN_MUTED, KIN_BORDER
+
 SEGMENT_NAMES = {
     0: "Champions",
     1: "Loyalists",
@@ -13,12 +15,13 @@ SEGMENT_NAMES = {
     4: "At Risk",
 }
 
+# Kinetric segment palette — teal reserved for Champions, amber signals risk
 SEGMENT_COLORS = {
-    "Champions":    "#1D4ED8",
-    "Loyalists":    "#059669",
-    "Promising":    "#7C3AED",
-    "Price Hunters":"#DC2626",
-    "At Risk":      "#F59E0B",
+    "Champions":     "#2DD4BF",  # teal — primary
+    "Loyalists":     "#22C55E",  # green — healthy
+    "Promising":     "#A78BFA",  # violet — emerging
+    "Price Hunters": "#60A5FA",  # blue — distinct but not-warning
+    "At Risk":       "#F59E0B",  # amber — warning
 }
 
 
@@ -76,22 +79,20 @@ def segment_scatter(segmented: pd.DataFrame) -> go.Figure:
         color="segment",
         size="total_revenue",
         color_discrete_map=SEGMENT_COLORS,
-        title="Customer Segments — Recency vs. Order Frequency",
+        title="Champions Cluster Tight and Recent. At Risk Drifts Right",
         labels={
             "days_since_last_order": "Days Since Last Order (Recency)",
             "total_orders": "Total Orders (Frequency)",
             "total_revenue": "Total Revenue",
         },
-        size_max=30,
-        opacity=0.75,
+        size_max=26,
+        opacity=0.78,
+    )
+    fig.update_traces(
+        marker=dict(line=dict(color=KIN_BG, width=1)),
     )
     fig.update_layout(
-        height=420,
-        margin=dict(t=50, b=40, l=50, r=20),
-        plot_bgcolor="white",
-        paper_bgcolor="white",
-        legend=dict(title="Segment"),
+        legend=dict(title=dict(text=""), orientation="h", y=1.05, x=0.01),
     )
-    fig.update_xaxes(showgrid=True, gridcolor="#F3F4F6")
-    fig.update_yaxes(showgrid=True, gridcolor="#F3F4F6")
+    fig = _apply_base_layout(fig, height=440)
     return fig
