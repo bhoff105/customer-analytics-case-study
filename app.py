@@ -132,89 +132,37 @@ st.markdown(
 # ── Executive Summary (deliverable preview) ──────────────────────────────────
 st.markdown(
     '''
-    <div class="exec-summary">
-      <div class="exec-summary__eyebrow">Executive summary</div>
-      <h2 class="exec-summary__headline">Here is what you walk away with after a Kinetric engagement.</h2>
-      <p class="exec-summary__lede">
-        You hand us two CSV exports and the question you have been sitting on: where is the revenue actually
-        leaking. You walk away with a named segmentation of your customer base, a churn score for every account,
-        a ranked list of the 20 customers your retention lead calls first, and a founder memo that reallocates
-        retention spend toward the group that actually moves your top line. The dollar shape of your opportunity
-        is retention, not acquisition, and this page is the full engagement you receive, end to end.
-      </p>
-
-      <div class="exec-summary__grid">
-        <div class="exec-summary__col">
-          <div class="exec-summary__col-label">What you hand over</div>
-          <div class="exec-summary__inputs">
-            <div class="exec-input">
-              <div class="exec-input__icon">CSV</div>
-              <div class="exec-input__meta">
-                <div class="exec-input__name">orders.csv</div>
-                <div class="exec-input__detail">18 months of transactions. Order dates, revenue, product category, discount flags. No documentation.</div>
-              </div>
-            </div>
-            <div class="exec-input">
-              <div class="exec-input__icon">CSV</div>
-              <div class="exec-input__meta">
-                <div class="exec-input__name">customers.csv</div>
-                <div class="exec-input__detail">Customer file with acquisition source, email engagement, lifetime totals. No data dictionary.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="exec-summary__col">
-          <div class="exec-summary__col-label">What you receive</div>
-          <div class="exec-summary__outputs">
-            <div class="exec-output">
-              <div class="exec-output__num">01</div>
-              <div class="exec-output__name">A segmented customer base</div>
-              <div class="exec-output__detail">Your customers grouped into five named segments (Champions, Loyalists, Promising, Price Hunters, At Risk) with a plain-English playbook for each.</div>
-            </div>
-            <div class="exec-output">
-              <div class="exec-output__num">02</div>
-              <div class="exec-output__name">A churn-risk score on every customer</div>
-              <div class="exec-output__detail">A 0 to 100 score on every account in your file, ranked by intervention priority so your retention spend goes where it earns.</div>
-            </div>
-            <div class="exec-output">
-              <div class="exec-output__num">03</div>
-              <div class="exec-output__name">A prioritized intervention list</div>
-              <div class="exec-output__detail">The 20 customers your retention lead works first, ranked by LTV times churn probability, with a specific recommended action on every row.</div>
-            </div>
-            <div class="exec-output">
-              <div class="exec-output__num">04</div>
-              <div class="exec-output__name">A one-page founder memo</div>
-              <div class="exec-output__detail">Three findings, three numbers, three actions with specific timelines. Written for you to forward to your retention lead without editing.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exec-summary__use">
-        <div class="exec-summary__use-label">What you do with them</div>
-        <p class="exec-summary__use-body">
-          On Monday morning, your retention lead pulls the 20-name intervention list and owns it end to end. By Friday,
-          they have launched a personalized three-touch win-back sequence against your At Risk cohort, targeting 15 to
-          20% reactivation inside 30 days. Inside that same 30-day window, you reallocate 30% of your paid social win-back
-          budget into email and organic cohort re-engagement, then measure 60-day repeat rate against baseline before
-          making the change permanent. Within 60 days, you ship a Gifts-entry post-purchase sequence that cross-sells
-          into Home &amp; Kitchen and Beauty &amp; Wellness, lifting 30-day second-order rate on Gifts-first buyers from
-          17% toward 40%. From that point forward, your segmentation and churn scores refresh monthly and drive every
-          retention decision you make. No new tools. No new hires.
-        </p>
-
-        <div class="exec-summary__use">
-          <div class="exec-summary__use-label">Cost of waiting a quarter</div>
-          <p class="exec-summary__use-body">
-            Your At Risk 20 keep slipping further from recoverable every week no one works the list. Your paid social
-            cohort keeps spending as it always has, acquiring the same low-retention customers on top of a churning base.
-            Your Gifts-first buyers keep arriving and exiting without a bridge into the categories that would have kept
-            them. The math of the opportunity gets worse, not better, while the outputs above sit unused.
-          </p>
-        </div>
-      </div>
-    </div>
+<div class="exec-summary">
+<div class="exec-summary__eyebrow">Executive summary</div>
+<h2 class="exec-summary__headline">Here is what you walk away with after a Kinetric engagement.</h2>
+<p class="exec-summary__lede">You hand us two CSV exports and the question you have been sitting on: where is the revenue actually leaking. You walk away with a named segmentation of your customer base, a churn score for every account, a ranked list of the 20 customers your retention lead calls first, and a founder memo that reallocates retention spend toward the group that actually moves your top line. The dollar shape of your opportunity is retention, not acquisition, and this page is the full engagement you receive, end to end.</p>
+<div class="exec-summary__grid">
+<div class="exec-summary__col">
+<div class="exec-summary__col-label">What you hand over</div>
+<div class="exec-summary__inputs">
+<div class="exec-input"><div class="exec-input__icon">CSV</div><div class="exec-input__meta"><div class="exec-input__name">orders.csv</div><div class="exec-input__detail">18 months of transactions. Order dates, revenue, product category, discount flags. No documentation.</div></div></div>
+<div class="exec-input"><div class="exec-input__icon">CSV</div><div class="exec-input__meta"><div class="exec-input__name">customers.csv</div><div class="exec-input__detail">Customer file with acquisition source, email engagement, lifetime totals. No data dictionary.</div></div></div>
+</div>
+</div>
+<div class="exec-summary__col">
+<div class="exec-summary__col-label">What you receive</div>
+<div class="exec-summary__outputs">
+<div class="exec-output"><div class="exec-output__num">01</div><div class="exec-output__name">A segmented customer base</div><div class="exec-output__detail">Your customers grouped into five named segments (Champions, Loyalists, Promising, Price Hunters, At Risk) with a plain-English playbook for each.</div></div>
+<div class="exec-output"><div class="exec-output__num">02</div><div class="exec-output__name">A churn-risk score on every customer</div><div class="exec-output__detail">A 0 to 100 score on every account in your file, ranked by intervention priority so your retention spend goes where it earns.</div></div>
+<div class="exec-output"><div class="exec-output__num">03</div><div class="exec-output__name">A prioritized intervention list</div><div class="exec-output__detail">The 20 customers your retention lead works first, ranked by LTV times churn probability, with a specific recommended action on every row.</div></div>
+<div class="exec-output"><div class="exec-output__num">04</div><div class="exec-output__name">A one-page founder memo</div><div class="exec-output__detail">Three findings, three numbers, three actions with specific timelines. Written for you to forward to your retention lead without editing.</div></div>
+</div>
+</div>
+</div>
+<div class="exec-summary__use">
+<div class="exec-summary__use-label">What you do with them</div>
+<p class="exec-summary__use-body">On Monday morning, your retention lead pulls the 20-name intervention list and owns it end to end. By Friday, they have launched a personalized three-touch win-back sequence against your At Risk cohort, targeting 15 to 20% reactivation inside 30 days. Inside that same 30-day window, you reallocate 30% of your paid social win-back budget into email and organic cohort re-engagement, then measure 60-day repeat rate against baseline before making the change permanent. Within 60 days, you ship a Gifts-entry post-purchase sequence that cross-sells into Home &amp; Kitchen and Beauty &amp; Wellness, lifting 30-day second-order rate on Gifts-first buyers from 17% toward 40%. From that point forward, your segmentation and churn scores refresh monthly and drive every retention decision you make. No new tools. No new hires.</p>
+</div>
+<div class="exec-summary__use">
+<div class="exec-summary__use-label">Cost of waiting a quarter</div>
+<p class="exec-summary__use-body">Your At Risk 20 keep slipping further from recoverable every week no one works the list. Your paid social cohort keeps spending as it always has, acquiring the same low-retention customers on top of a churning base. Your Gifts-first buyers keep arriving and exiting without a bridge into the categories that would have kept them. The math of the opportunity gets worse, not better, while the outputs above sit unused.</p>
+</div>
+</div>
     ''',
     unsafe_allow_html=True,
 )
