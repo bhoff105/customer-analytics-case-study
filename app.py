@@ -763,7 +763,7 @@ st.markdown(
 st.markdown(
     '''
     <div class="soft-cta">
-      <a class="soft-cta__item" href="https://kinetric.co" target="_blank" rel="noopener noreferrer">
+      <a class="soft-cta__item" href="https://data-discovery-tool-3tvfke3anwvtyj4c7nr9uq.streamlit.app" target="_blank" rel="noopener noreferrer">
         <span class="soft-cta__prompt">Want to see this run on your own data?</span>
         <span class="soft-cta__target">Open the Data Discovery Tool → kinetric.co</span>
       </a>

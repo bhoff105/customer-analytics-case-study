@@ -1,6 +1,6 @@
 # Customer Analytics Case Study
 
-**Live:** [CASE_STUDY_URL](CASE_STUDY_URL)
+**Live:** [https://customer-analytics-case-study-ta7fe6htvtj5g9y3yanhcc.streamlit.app](https://customer-analytics-case-study-ta7fe6htvtj5g9y3yanhcc.streamlit.app)
 
 A complete DTC analytics engagement from raw CSV to recommendation memo. A $1.5M Shopify brand hands over two exports with no documentation and says "tell us what we're missing." Five stages later — data assessment, exploratory analysis, customer segmentation, churn prediction, recommendation memo — the founder has a segmented customer base, a churn-risk score for every buyer, a prioritized win-back list, and a three-finding memo they can hand to their retention lead this week.
 
