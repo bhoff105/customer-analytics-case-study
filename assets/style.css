@@ -627,22 +627,31 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.85;
 }
 
-.memo-body h1,
-.memo-body h2,
-.memo-body h3,
-.memo-body h4,
-.memo-body strong {
-  font-family: 'DM Sans', sans-serif;
-  color: #0B0F1A;
-  font-weight: 600;
+/* Override global .stMarkdown body styles that would otherwise wash out the memo */
+.memo-container .memo-body p,
+.memo-container .memo-body li {
+  color: #1F2937 !important;
+  font-family: 'Georgia', 'Times New Roman', serif !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
 }
 
-.memo-body h1 { font-size: 22px; margin: var(--space-6) 0 var(--space-3); }
-.memo-body h2 { font-size: 20px; margin: var(--space-5) 0 var(--space-3); }
-.memo-body h3 { font-size: 17px; margin: var(--space-4) 0 var(--space-2); }
+.memo-container .memo-body strong,
+.memo-container .memo-body h1,
+.memo-container .memo-body h2,
+.memo-container .memo-body h3 {
+  font-family: 'DM Sans', sans-serif !important;
+  color: #0B0F1A !important;
+  font-weight: 600 !important;
+}
+
+.memo-body h1 { font-size: 22px !important; margin: var(--space-6) 0 var(--space-3) !important; }
+.memo-body h2 { font-size: 20px !important; margin: var(--space-5) 0 var(--space-3) !important; }
+.memo-body h3 { font-size: 17px !important; margin: var(--space-4) 0 var(--space-2) !important; }
 
 .memo-body p { margin-bottom: var(--space-4); }
-.memo-body hr {
+.memo-body hr,
+.memo-body hr.memo-rule {
   border: none !important;
   height: 1px !important;
   background: #D4D4D0 !important;
@@ -654,7 +663,7 @@ h1, h2, h3, h4, h5, h6,
   margin: var(--space-3) 0 var(--space-4) var(--space-5);
   padding: 0;
 }
-.memo-body li { margin-bottom: var(--space-2); color: #1F2937; }
+.memo-body li { margin-bottom: var(--space-2); }
 
 .memo-footer {
   margin-top: var(--space-7);

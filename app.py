@@ -643,37 +643,55 @@ analyst_note(
 )
 
 st.markdown("### Final memo (as delivered)")
-memo_body_md = """**Executive Summary**
 
-You have a retention problem, not an acquisition problem, and the data points cleanly at where to start. Your top 20% of customers generate 53% of your revenue, and a recoverable group of them has gone quiet in the last 60 to 150 days. Three moves over the next 60 days, sequenced below, address the bulk of the gap.
+# Memo body pre-rendered as HTML so it sits inside the .memo-container div
+# cleanly — splitting across multiple st.markdown calls causes Streamlit to
+# close the container early and the body renders as a sibling rather than a child.
+memo_body_html = (
+    '<p><strong>Executive Summary</strong></p>'
+    '<p>You have a retention problem, not an acquisition problem, and the data points cleanly at where to start. '
+    'Your top 20% of customers generate 53% of your revenue, and a recoverable group of them has gone quiet in '
+    'the last 60 to 150 days. Three moves over the next 60 days, sequenced below, address the bulk of the gap.</p>'
+    '<hr class="memo-rule" />'
+    '<p><strong>Finding 1: Your highest-value lapsed customers are a winnable group, and no one is working them.</strong></p>'
+    '<p>Your "At Risk" segment is a set of previously high-LTV buyers who haven\'t purchased in 60 or more days. '
+    'These aren\'t discount-chasers. They\'re customers who already demonstrated affinity, then went quiet. A '
+    'three-touch, 21-day personalized win-back sequence keyed to each customer\'s purchase history is the '
+    'highest-return move available to you right now. No blanket discount. A discount here trains your best '
+    'customers to wait for the next one, which is exactly the pattern you\'re trying to reverse with the Price '
+    'Hunter segment.</p>'
+    '<p><strong>Finding 2: Your acquisition mix is at war with your retention economics.</strong></p>'
+    '<p>Paid social is acquiring roughly 52% of your new customers and retaining about 22% of them at 12 months. '
+    'Email and organic acquire fewer customers but retain them near 70% and 59% respectively. You\'re currently '
+    'funding re-engagement against paid social cohorts at roughly the same rate as organic cohorts, which is '
+    'subsidizing the channel that produces your worst customers. Shifting 30% of paid social win-back budget into '
+    'email and organic cohort re-engagement improves retention ROI without raising total spend.</p>'
+    '<p><strong>Finding 3: One category is structurally breaking your retention funnel.</strong></p>'
+    '<p>Customers whose first purchase is in the Gifts category repeat at roughly 17% versus 71% for every other '
+    'category. The problem isn\'t the product or the price. A gift purchase creates no natural reason for the '
+    'buyer to return, so without a bridge into a category they\'d use themselves, the relationship ends at the '
+    'first order. A category-specific post-purchase sequence introducing the two highest-retention categories '
+    '(Home &amp; Kitchen, Beauty &amp; Wellness) closes the gap.</p>'
+    '<hr class="memo-rule" />'
+    '<p><strong>Recommended Next Steps</strong></p>'
+    '<ol class="memo-steps">'
+    '<li><strong>This week, by Friday:</strong> Pull the 20-name intervention list from Stage 4. Assign it to one '
+    'owner. Launch the At Risk win-back sequence with personalized outreach. Target: 15 to 20% reactivation '
+    'inside 30 days.</li>'
+    '<li><strong>Within 30 days:</strong> Reallocate retention spend by acquisition source. Reduce paid social '
+    'win-back budget by 30%. Redirect to email and organic cohort re-engagement. Measure 60-day repeat rate '
+    'against baseline before making it permanent.</li>'
+    '<li><strong>Within 60 days:</strong> Ship a Gifts-entry post-purchase sequence. Three emails over 14 days. '
+    'Cross-sell into Home &amp; Kitchen and Beauty &amp; Wellness. Success metric: 30-day second-order rate on '
+    'Gifts-first buyers lifted from 17% toward the 40% mark.</li>'
+    '</ol>'
+)
 
----
-
-**Finding 1: Your highest-value lapsed customers are a winnable group, and no one is working them.**
-
-Your "At Risk" segment is a set of previously high-LTV buyers who haven't purchased in 60 or more days. These aren't discount-chasers. They're customers who already demonstrated affinity, then went quiet. A three-touch, 21-day personalized win-back sequence keyed to each customer's purchase history is the highest-return move available to you right now. No blanket discount. A discount here trains your best customers to wait for the next one, which is exactly the pattern you're trying to reverse with the Price Hunter segment.
-
-**Finding 2: Your acquisition mix is at war with your retention economics.**
-
-Paid social is acquiring roughly 52% of your new customers and retaining about 22% of them at 12 months. Email and organic acquire fewer customers but retain them near 70% and 59% respectively. You're currently funding re-engagement against paid social cohorts at roughly the same rate as organic cohorts, which is subsidizing the channel that produces your worst customers. Shifting 30% of paid social win-back budget into email and organic cohort re-engagement improves retention ROI without raising total spend.
-
-**Finding 3: One category is structurally breaking your retention funnel.**
-
-Customers whose first purchase is in the Gifts category repeat at roughly 17% versus 71% for every other category. The problem isn't the product or the price. A gift purchase creates no natural reason for the buyer to return, so without a bridge into a category they'd use themselves, the relationship ends at the first order. A category-specific post-purchase sequence introducing the two highest-retention categories (Home & Kitchen, Beauty & Wellness) closes the gap.
-
----
-
-**Recommended Next Steps**
-
-1. **This week, by Friday:** Pull the 20-name intervention list from Stage 4. Assign it to one owner. Launch the At Risk win-back sequence with personalized outreach. Target: 15–20% reactivation inside 30 days.
-2. **Within 30 days:** Reallocate retention spend by acquisition source. Reduce paid social win-back budget by 30%. Redirect to email and organic cohort re-engagement. Measure 60-day repeat rate against baseline before making it permanent.
-3. **Within 60 days:** Ship a Gifts-entry post-purchase sequence. Three emails over 14 days. Cross-sell into Home & Kitchen and Beauty & Wellness. Success metric: 30-day second-order rate on Gifts-first buyers lifted from 17% toward the 40% mark.
-"""
-
-# Render memo inline as a document-styled HTML block — the deliverable
-# rendered as if it were the printed page, inside the app.
+# Render memo inline as a document-styled HTML block — single st.markdown call
+# so the container doesn't get split by Streamlit's wrapper divs.
 st.markdown(
-    '<div class="memo-container"><div class="memo-header">'
+    '<div class="memo-container">'
+    '<div class="memo-header">'
     '<div class="memo-header__brand"><span>Kinetric</span>'
     '<span class="memo-header__brand-tag">Advisory Memorandum</span></div>'
     '<div class="memo-header__label">To</div>'
@@ -684,12 +702,8 @@ st.markdown(
     '<div class="memo-header__value">Engagement Closeout</div>'
     '<div class="memo-header__label">Re</div>'
     '<div class="memo-header__value">Customer Analytics Findings &amp; Recommendations</div>'
-    '</div><div class="memo-body">',
-    unsafe_allow_html=True,
-)
-st.markdown(memo_body_md)
-st.markdown(
     '</div>'
+    f'<div class="memo-body">{memo_body_html}</div>'
     '<div class="memo-footer">Kinetric · kinetric.co · Prepared for client use</div>'
     '</div>',
     unsafe_allow_html=True,
