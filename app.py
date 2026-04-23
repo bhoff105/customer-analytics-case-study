@@ -1,3 +1,4 @@
+import base64
 from pathlib import Path
 import pandas as pd
 import streamlit as st
@@ -671,39 +672,8 @@ Customers whose first purchase is in the Gifts category repeat at roughly 17% ve
 3. **Within 60 days:** Ship a Gifts-entry post-purchase sequence. Three emails over 14 days. Cross-sell into Home & Kitchen and Beauty & Wellness. Success metric: 30-day second-order rate on Gifts-first buyers lifted from 17% toward the 40% mark.
 """
 
-# Render memo in document-style container
-st.markdown(
-    f'''
-    <div class="memo-container">
-      <div class="memo-header">
-        <div class="memo-header__brand">
-          <span>Kinetric</span>
-          <span class="memo-header__brand-tag">Advisory Memorandum</span>
-        </div>
-        <div class="memo-header__label">To</div>
-        <div class="memo-header__value">[Client Name], Founder</div>
-        <div class="memo-header__label">From</div>
-        <div class="memo-header__value">Brendan Hoffman, Kinetric</div>
-        <div class="memo-header__label">Date</div>
-        <div class="memo-header__value">Engagement Closeout</div>
-        <div class="memo-header__label">Re</div>
-        <div class="memo-header__value">Customer Analytics Findings &amp; Recommendations</div>
-      </div>
-      <div class="memo-body">
-    ''',
-    unsafe_allow_html=True,
-)
-st.markdown(memo_body_md)
-st.markdown(
-    '''
-      </div>
-      <div class="memo-footer">Kinetric · kinetric.co · Prepared for client use</div>
-    </div>
-    ''',
-    unsafe_allow_html=True,
-)
-
-# ── Memo PDF download ────────────────────────────────────────────────────
+# Render memo as an embedded PDF — the literal deliverable the client receives,
+# rendered inline inside the app using a base64 data URI in an <iframe>.
 try:
     _pdf_bytes = build_memo_pdf(
         memo_body_md=memo_body_md,
@@ -712,15 +682,13 @@ try:
         date_="Engagement Closeout",
         re_="Customer Analytics Findings & Recommendations",
     )
-    st.download_button(
-        label="Download memo as PDF",
-        data=_pdf_bytes,
-        file_name="kinetric_customer_analytics_memo.pdf",
-        mime="application/pdf",
-        use_container_width=False,
+    _b64 = base64.b64encode(_pdf_bytes).decode("utf-8")
+    st.markdown(
+        f'<iframe src="data:application/pdf;base64,{_b64}" class="memo-pdf-viewer" type="application/pdf"></iframe>',
+        unsafe_allow_html=True,
     )
 except Exception as _pdf_err:
-    st.caption(f"PDF export unavailable: {_pdf_err}")
+    st.caption(f"Memo render unavailable: {_pdf_err}")
 
 section_divider()
 
